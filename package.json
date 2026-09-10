@@ -1,0 +1,16 @@
+{
+  "name": "laptop-marketplace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-Powered Laptop Recommendation and Marketplace for Gulhaji Plaza",
+  "author": "Muhammad Ali",
+  "license": "UNLICENSED",
+  "scripts": {
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.2",
+    "@commitlint/config-conventional": "^21.2.2",
+    "husky": "^9.1.7"
+  }
+}

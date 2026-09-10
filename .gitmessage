@@ -1,0 +1,16 @@
+
+# ---------------------------------------------------------------
+# <type>(<scope>): <subject>     (max 72 chars, imperative)
+# ---------------------------------------------------------------
+#
+# Types:  feat, fix, docs, style, refactor, test, chore, perf, ci, revert
+# Scopes: catalog, auth, inventory, ai, customer, vendor, admin,
+#         home, gateway, db, ui, ci, docs, docker, config
+#
+# Body (optional, wrap at 72 chars):
+#   Explain WHAT and WHY. Not HOW.
+#
+# Footer (optional):
+#   Closes #123
+#   BREAKING CHANGE: describe the breaking change
+# ---------------------------------------------------------------
