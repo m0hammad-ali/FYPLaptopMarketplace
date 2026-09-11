@@ -1,4 +1,1 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-# Placeholder - will add lint-staged on Day 11
+# Placeholder - will add lint-staged soon

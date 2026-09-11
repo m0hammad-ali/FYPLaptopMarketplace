@@ -6,11 +6,18 @@
   "author": "Muhammad Ali",
   "license": "UNLICENSED",
   "scripts": {
-    "prepare": "husky"
+    "prepare": "husky",
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "docker:up": "docker-compose up -d --build",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "docker:ps": "docker-compose ps"
   },
   "devDependencies": {
-    "@commitlint/cli": "^21.2.2",
-    "@commitlint/config-conventional": "^21.2.2",
-    "husky": "^9.1.7"
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "husky": "^8.0.3",
+    "turbo": "^1.11.2"
   }
 }
