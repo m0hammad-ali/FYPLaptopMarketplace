@@ -1,4 +1,3 @@
-// Placeholder for shared React components
-// Will be populated soon with Button, Card, Input, etc.
-
-module.exports = {};
+export { default as Button } from './Button.jsx';
+export { default as Card } from './Card.jsx';
+export { default as LoadingSpinner } from './LoadingSpinner.jsx';
