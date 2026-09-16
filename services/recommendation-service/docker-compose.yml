@@ -1,0 +1,16 @@
+recommendation-service:
+  build:
+    context: .
+    dockerfile: services/recommendation-service/Dockerfile
+  container_name: recommendation-service
+  ports:
+    - "5004:5004"
+  environment:
+    - CATALOG_SERVICE_URL=http://catalog-service:5002
+  depends_on:
+    - catalog-service
+  volumes:
+    - ./services/recommendation-service:/app
+  command: uvicorn main:app --host 0.0.0.0 --port 5004 --reload
+  networks:
+    - marketplace
