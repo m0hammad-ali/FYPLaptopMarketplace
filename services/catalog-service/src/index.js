@@ -48,7 +48,7 @@ async function start() {
     await sequelize.authenticate();
     console.log('Database connection established');
 
-    await sequelize.sync({ alter: true });
+    await sequelize.sync();
     console.log('Database schema synchronized');
 
     app.listen(port, () => {

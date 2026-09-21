@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 require('dotenv').config();
 
@@ -27,6 +28,22 @@ app.set('trust proxy', 1);
 
 const port = process.env.PORT || 5000;
 
+// ---- Rate limiting ----
+const globalLimiter = rateLimit({
+  windowMs: 60 * 1000,
+  max: 100,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { error: 'Too many requests, please try again later.' },
+});
+app.use(globalLimiter);
+
+const authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 20,
+  message: { error: 'Too many login attempts, please try again later.' },
+});
+
 // ---- Health check ----
 app.get('/health', (req, res) => {
   res.json({
@@ -36,19 +53,27 @@ app.get('/health', (req, res) => {
   });
 });
 
-// ---- Public proxy routes (no auth) ----
-
-// Catalog — /api/laptops/featured is public, /api/laptops is auth-gated below
+// ---- Public routes ----
 app.use(
-  '/api/laptops/featured',
+  '/api/auth/login',
+  authLimiter,
   createProxyMiddleware({
-    target: process.env.CATALOG_SERVICE_URL || 'http://catalog-service:5002',
+    target: process.env.AUTH_SERVICE_URL || 'http://auth-service:5001',
     changeOrigin: true,
-    pathRewrite: { '^/api/laptops/featured': '/laptops/featured' },
+    pathRewrite: { '^/api/auth': '' },
   })
 );
 
-// Auth (register, login) — open access
+app.use(
+  '/api/auth/register',
+  authLimiter,
+  createProxyMiddleware({
+    target: process.env.AUTH_SERVICE_URL || 'http://auth-service:5001',
+    changeOrigin: true,
+    pathRewrite: { '^/api/auth': '' },
+  })
+);
+
 app.use(
   '/api/auth',
   createProxyMiddleware({
@@ -58,7 +83,15 @@ app.use(
   })
 );
 
-// Notifications — used by customer app for WhatsApp links
+app.use(
+  '/api/laptops/featured',
+  createProxyMiddleware({
+    target: process.env.CATALOG_SERVICE_URL || 'http://catalog-service:5002',
+    changeOrigin: true,
+    pathRewrite: { '^/api/laptops/featured': '/laptops/featured' },
+  })
+);
+
 app.use(
   '/api/notify',
   createProxyMiddleware({
@@ -68,9 +101,7 @@ app.use(
   })
 );
 
-// ---- Auth-protected proxy routes ----
-
-// Full laptop catalog requires login
+// ---- Protected routes ----
 app.use(
   '/api/laptops',
   authenticate,
@@ -81,7 +112,6 @@ app.use(
   })
 );
 
-// Recommendation engine
 app.use(
   '/api/recommend',
   createProxyMiddleware({
@@ -91,7 +121,6 @@ app.use(
   })
 );
 
-// Inventory (vendor only — enforced inside inventory-service)
 app.use(
   '/api/inventory',
   authenticate,
@@ -102,7 +131,6 @@ app.use(
   })
 );
 
-// Shops
 app.use(
   '/api/shops',
   authenticate,
@@ -113,7 +141,6 @@ app.use(
   })
 );
 
-// Admin (IP-restricted + auth + role check)
 app.use(
   '/api/admin',
   adminIpCheck,
@@ -125,15 +152,12 @@ app.use(
   })
 );
 
-// ---- JSON body parser for any remaining local routes ----
 app.use(express.json());
 
-// ---- 404 handler ----
 app.use((req, res) => {
   res.status(404).json({ error: 'Route not found' });
 });
 
-// ---- Global error handler ----
 app.use((err, req, res, next) => {
   console.error('[GATEWAY ERROR]', err.message);
   res.status(err.status || 500).json({ error: err.message || 'Internal server error' });

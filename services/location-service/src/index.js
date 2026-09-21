@@ -34,7 +34,7 @@ async function start() {
   try {
     await sequelize.authenticate();
     console.log('Location DB connected');
-    await sequelize.sync({ alter: true });
+    await sequelize.sync();
     console.log('Location schema synced');
 
     app.listen(port, () => {

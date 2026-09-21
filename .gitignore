@@ -79,3 +79,5 @@ results/k6-*.json
 
 # ===== Keep scraped data (important!) =====
 !services/catalog-service/seed-data/laptops.json
+*.bak
+*.backup

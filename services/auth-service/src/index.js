@@ -1,8 +1,10 @@
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
 const { sequelize } = require('./models');
 const authRoutes = require('./routes/authRoutes');
+const sanitize = require('./middleware/sanitize');
 require('dotenv').config();
 
 const app = express();
@@ -10,31 +12,30 @@ const app = express();
 app.use(helmet());
 app.use(cors({ origin: true, credentials: true }));
 app.use(express.json());
+app.use(sanitize);
+app.set('trust proxy', 1);
 
 const port = process.env.PORT || 5001;
 
-// Health check with DB connectivity
+// Local rate limiter as defense-in-depth
+const authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 20,
+});
+app.use('/login', authLimiter);
+app.use('/register', authLimiter);
+
 app.get('/health', async (req, res) => {
   try {
     await sequelize.authenticate();
-    res.json({
-      status: 'ok',
-      service: 'auth-service',
-      database: 'connected',
-    });
+    res.json({ status: 'ok', service: 'auth-service', database: 'connected' });
   } catch (error) {
-    res.status(503).json({
-      status: 'error',
-      service: 'auth-service',
-      database: 'disconnected',
-      error: error.message,
-    });
+    res.status(503).json({ status: 'error', error: error.message });
   }
 });
 
 app.use('/', authRoutes);
 
-// Global error handler
 app.use((err, req, res, next) => {
   console.error('[AUTH ERROR]', err.message);
   res.status(err.status || 500).json({ error: err.message || 'Internal error' });
