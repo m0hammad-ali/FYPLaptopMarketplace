@@ -1,4 +1,5 @@
 import { Toaster } from 'react-hot-toast';
+import { Shield, LogOut } from 'lucide-react';
 import ProtectedRoute from './components/ProtectedRoute';
 import VendorsTab from './components/VendorsTab';
 
@@ -6,29 +7,40 @@ function Dashboard() {
   const email = localStorage.getItem('userEmail') || 'Admin';
 
   const handleLogout = () => {
-    localStorage.removeItem('adminToken');
-    localStorage.removeItem('userRole');
-    localStorage.removeItem('userEmail');
+    ['adminToken', 'userRole', 'userEmail'].forEach((k) => localStorage.removeItem(k));
     window.location.href = 'http://localhost:3004/login?redirect=admin';
   };
 
   return (
-    <div className="app-container">
-      <header className="app-header">
-        <div className="app-header-inner">
-          <div className="app-logo">LaptopMarket · Admin</div>
-          <div className="app-user">
-            <span>{email}</span>
-            <button className="logout-btn" onClick={handleLogout}>
+    <div className="min-h-screen bg-gray-50">
+      {/* Dark header */}
+      <header className="bg-gray-900 text-white">
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
+          <div className="flex items-center gap-2 font-extrabold">
+            <Shield className="h-5 w-5 text-indigo-400" />
+            <span>Admin Panel</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <span className="hidden text-sm text-gray-400 sm:block">{email}</span>
+            <button
+              onClick={handleLogout}
+              className="inline-flex items-center gap-2 rounded-lg bg-red-500 px-3 py-2 text-xs font-semibold text-white transition hover:bg-red-600"
+            >
+              <LogOut className="h-3.5 w-3.5" />
               Logout
             </button>
           </div>
         </div>
       </header>
 
-      <main className="main-content">
-        <h1 className="page-title">Admin Panel</h1>
-        <p className="page-subtitle">Verify vendors and monitor the marketplace.</p>
+      {/* Main */}
+      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
+        <div className="mb-8">
+          <h1 className="text-3xl font-extrabold text-gray-900">Admin Dashboard</h1>
+          <p className="mt-1 text-sm text-gray-500">
+            Verify vendors and monitor the marketplace.
+          </p>
+        </div>
 
         <VendorsTab />
       </main>
