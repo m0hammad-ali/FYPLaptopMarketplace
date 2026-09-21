@@ -25,21 +25,11 @@
     --ring: 243 75% 59%;
     --radius: 0.625rem;
   }
-
-  * {
-    @apply border-border;
-  }
+  * { @apply border-border; }
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
-  html, body, #root {
-    height: 100%;
-  }
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-  button {
-    font-family: inherit;
-  }
+  html, body, #root { height: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; }
 }

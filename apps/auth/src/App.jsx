@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Toaster, toast } from 'react-hot-toast';
 import axios from 'axios';
+import { Laptop, Mail, Lock, User, Loader2, ArrowLeft } from 'lucide-react';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
@@ -10,49 +11,40 @@ const ROLE_URLS = {
   admin: 'http://localhost:3003',
 };
 
-function getRedirectParam() {
-  const params = new URLSearchParams(window.location.search);
-  return params.get('redirect') || 'customer';
-}
-
 export default function App() {
-  const [mode, setMode] = useState('login'); // 'login' | 'register'
+  const [mode, setMode] = useState('login');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('customer');
   const [loading, setLoading] = useState(false);
 
-  const redirectHint = getRedirectParam();
-
   useEffect(() => {
-    // If user is already logged in, redirect
-    const role = localStorage.getItem('userRole');
-    if (role && ROLE_URLS[role]) {
-      window.location.href = ROLE_URLS[role];
+    const savedRole = localStorage.getItem('userRole');
+    if (savedRole && ROLE_URLS[savedRole]) {
+      window.location.href = ROLE_URLS[savedRole];
     }
   }, []);
 
   async function handleSubmit(e) {
     e.preventDefault();
     setLoading(true);
+
     try {
       const endpoint = mode === 'login' ? '/api/auth/login' : '/api/auth/register';
       const payload = mode === 'login' ? { email, password } : { email, password, role };
-      const res = await axios.post(`${API_URL}${endpoint}`, payload);
 
+      const res = await axios.post(`${API_URL}${endpoint}`, payload);
       const { token, user } = res.data;
 
-      // Store token and role
-      const tokenKey = `${user.role}Token`;
-      localStorage.setItem(tokenKey, token);
+      localStorage.setItem(`${user.role}Token`, token);
       localStorage.setItem('userRole', user.role);
       localStorage.setItem('userEmail', user.email);
 
-      toast.success(mode === 'login' ? 'Login successful' : 'Account created');
+      toast.success(mode === 'login' ? 'Welcome back!' : 'Account created!');
 
       setTimeout(() => {
         window.location.href = ROLE_URLS[user.role] || ROLE_URLS.customer;
-      }, 600);
+      }, 500);
     } catch (err) {
       const msg =
         err.response?.data?.error ||
@@ -65,186 +57,115 @@ export default function App() {
   }
 
   return (
-    <div style={styles.page}>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-600 via-indigo-700 to-violet-700 p-4">
       <Toaster position="top-right" />
-      <div style={styles.card}>
-        <h1 style={styles.title}>Laptop Marketplace</h1>
-        <p style={styles.subtitle}>
-          {mode === 'login' ? 'Sign in to your account' : 'Create a new account'}
-        </p>
 
-        <div style={styles.tabs}>
-          <button
-            onClick={() => setMode('login')}
-            style={{ ...styles.tab, ...(mode === 'login' ? styles.tabActive : {}) }}
-          >
-            Login
-          </button>
-          <button
-            onClick={() => setMode('register')}
-            style={{ ...styles.tab, ...(mode === 'register' ? styles.tabActive : {}) }}
-          >
-            Register
-          </button>
+      <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-2xl">
+        {/* Header */}
+        <div className="mb-8 flex flex-col items-center">
+          <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-100 text-indigo-600">
+            <Laptop className="h-7 w-7" />
+          </div>
+          <h1 className="text-2xl font-extrabold text-gray-900">Laptop Marketplace</h1>
+          <p className="mt-1 text-sm text-gray-500">
+            {mode === 'login' ? 'Sign in to your account' : 'Create a new account'}
+          </p>
         </div>
 
-        {redirectHint && mode === 'login' && (
-          <p style={styles.hint}>
-            Login as <strong>{redirectHint}</strong> to continue
-          </p>
-        )}
+        {/* Tabs */}
+        <div className="mb-6 flex rounded-lg bg-gray-100 p-1">
+          {['login', 'register'].map((m) => (
+            <button
+              key={m}
+              type="button"
+              onClick={() => setMode(m)}
+              className={`flex-1 rounded-md py-2 text-sm font-semibold transition ${
+                mode === m
+                  ? 'bg-white text-indigo-600 shadow-sm'
+                  : 'text-gray-500 hover:text-gray-700'
+              }`}
+            >
+              {m === 'login' ? 'Sign In' : 'Sign Up'}
+            </button>
+          ))}
+        </div>
 
-        <form onSubmit={handleSubmit} style={styles.form}>
-          <label style={styles.label}>
-            Email
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              style={styles.input}
-              placeholder="you@example.com"
-            />
-          </label>
+        {/* Form */}
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <label className="mb-1.5 block text-sm font-semibold text-gray-700">Email</label>
+            <div className="relative">
+              <Mail className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                placeholder="you@example.com"
+                className="w-full rounded-lg border border-gray-300 pl-10 pr-3 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
+              />
+            </div>
+          </div>
 
-          <label style={styles.label}>
-            Password
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              minLength={6}
-              style={styles.input}
-              placeholder="At least 6 characters"
-            />
-          </label>
+          <div>
+            <label className="mb-1.5 block text-sm font-semibold text-gray-700">Password</label>
+            <div className="relative">
+              <Lock className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                minLength={6}
+                placeholder="At least 6 characters"
+                className="w-full rounded-lg border border-gray-300 pl-10 pr-3 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
+              />
+            </div>
+          </div>
 
           {mode === 'register' && (
-            <label style={styles.label}>
-              I am a
-              <select value={role} onChange={(e) => setRole(e.target.value)} style={styles.input}>
-                <option value="customer">Customer</option>
-                <option value="vendor">Vendor</option>
-                <option value="admin">Admin</option>
-              </select>
-            </label>
+            <div>
+              <label className="mb-1.5 block text-sm font-semibold text-gray-700">
+                I am a
+              </label>
+              <div className="relative">
+                <User className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
+                <select
+                  value={role}
+                  onChange={(e) => setRole(e.target.value)}
+                  className="w-full appearance-none rounded-lg border border-gray-300 pl-10 pr-3 py-2.5 text-sm text-gray-900 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
+                >
+                  <option value="customer">Customer — Buy laptops</option>
+                  <option value="vendor">Vendor — Sell laptops</option>
+                  <option value="admin">Admin — Manage platform</option>
+                </select>
+              </div>
+            </div>
           )}
 
           <button
             type="submit"
             disabled={loading}
-            style={{ ...styles.submit, opacity: loading ? 0.6 : 1 }}
+            className="mt-2 flex w-full items-center justify-center gap-2 rounded-lg bg-indigo-600 py-3 text-sm font-bold text-white transition hover:bg-indigo-700 disabled:opacity-60"
           >
-            {loading ? 'Please wait...' : mode === 'login' ? 'Sign In' : 'Create Account'}
+            {loading && <Loader2 className="h-4 w-4 animate-spin" />}
+            {loading
+              ? 'Please wait...'
+              : mode === 'login'
+              ? 'Sign In'
+              : 'Create Account'}
           </button>
         </form>
 
-        <a href="http://localhost:3000" style={styles.backLink}>
-          ← Back to Home
+        {/* Footer link */}
+        <a
+          href="http://localhost:3000"
+          className="mt-6 flex items-center justify-center gap-1 text-sm text-gray-500 transition hover:text-indigo-600"
+        >
+          <ArrowLeft className="h-3.5 w-3.5" />
+          Back to Home
         </a>
       </div>
     </div>
   );
 }
-
-const styles = {
-  page: {
-    minHeight: '100vh',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-    padding: '20px',
-  },
-  card: {
-    background: '#fff',
-    padding: '40px',
-    borderRadius: '16px',
-    boxShadow: '0 20px 40px rgba(0,0,0,0.15)',
-    width: '100%',
-    maxWidth: '420px',
-  },
-  title: {
-    fontSize: '26px',
-    fontWeight: 800,
-    color: '#111827',
-    textAlign: 'center',
-    marginBottom: '6px',
-  },
-  subtitle: {
-    color: '#6b7280',
-    textAlign: 'center',
-    marginBottom: '24px',
-    fontSize: '14px',
-  },
-  tabs: {
-    display: 'flex',
-    gap: '8px',
-    marginBottom: '20px',
-    background: '#f3f4f6',
-    padding: '4px',
-    borderRadius: '10px',
-  },
-  tab: {
-    flex: 1,
-    padding: '10px',
-    border: 'none',
-    background: 'transparent',
-    borderRadius: '8px',
-    fontSize: '14px',
-    fontWeight: 600,
-    color: '#6b7280',
-    cursor: 'pointer',
-  },
-  tabActive: {
-    background: '#fff',
-    color: '#4f46e5',
-    boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
-  },
-  hint: {
-    fontSize: '13px',
-    color: '#4f46e5',
-    textAlign: 'center',
-    marginBottom: '12px',
-  },
-  form: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '16px',
-  },
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '6px',
-    fontSize: '13px',
-    fontWeight: 600,
-    color: '#374151',
-  },
-  input: {
-    padding: '11px 14px',
-    border: '1px solid #d1d5db',
-    borderRadius: '8px',
-    fontSize: '14px',
-    outline: 'none',
-  },
-  submit: {
-    marginTop: '8px',
-    padding: '12px',
-    background: '#4f46e5',
-    color: '#fff',
-    border: 'none',
-    borderRadius: '8px',
-    fontSize: '15px',
-    fontWeight: 600,
-    cursor: 'pointer',
-  },
-  backLink: {
-    display: 'block',
-    textAlign: 'center',
-    marginTop: '20px',
-    color: '#6b7280',
-    fontSize: '13px',
-    textDecoration: 'none',
-  },
-};
