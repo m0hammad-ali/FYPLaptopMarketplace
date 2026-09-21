@@ -19,5 +19,12 @@
     "@commitlint/config-conventional": "^18.4.3",
     "husky": "^8.0.3",
     "turbo": "^1.11.2"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.3.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.47.0",
+    "tailwind-merge": "^3.7.0"
   }
 }

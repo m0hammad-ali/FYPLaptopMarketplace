@@ -1,57 +1,47 @@
-import React from 'react';
+import * as React from 'react';
+import { Slot } from '@radix-ui/react-slot';
+import { cva } from 'class-variance-authority';
+import { cn } from './utils';
 
-export default function Button({
-  variant = 'primary',
-  size = 'md',
-  fullWidth = false,
-  disabled = false,
-  children,
-  onClick,
-  type = 'button',
-  className = '',
-}) {
-  const base = {
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: '8px',
-    fontFamily: 'Inter, sans-serif',
-    fontWeight: 600,
-    borderRadius: '8px',
-    border: 'none',
-    transition: 'all 0.15s ease',
-    cursor: disabled ? 'not-allowed' : 'pointer',
-    opacity: disabled ? 0.6 : 1,
-    width: fullWidth ? '100%' : 'auto',
-  };
+const buttonVariants = cva(
+  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-semibold transition-all disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+  {
+    variants: {
+      variant: {
+        default: 'bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm',
+        destructive: 'bg-destructive text-destructive-foreground hover:bg-destructive/90',
+        outline: 'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
+        secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+        ghost: 'hover:bg-accent hover:text-accent-foreground',
+        link: 'text-primary underline-offset-4 hover:underline',
+        whatsapp: 'bg-[#25D366] text-white hover:bg-[#20BD5A]',
+      },
+      size: {
+        default: 'h-10 px-4 py-2',
+        sm: 'h-8 rounded-md px-3 text-xs',
+        lg: 'h-12 rounded-lg px-8 text-base',
+        icon: 'h-10 w-10',
+      },
+    },
+    defaultVariants: {
+      variant: 'default',
+      size: 'default',
+    },
+  }
+);
 
-  const sizes = {
-    sm: { padding: '8px 14px', fontSize: '13px' },
-    md: { padding: '10px 20px', fontSize: '14px' },
-    lg: { padding: '14px 28px', fontSize: '16px' },
-  };
+const Button = React.forwardRef(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : 'button';
+    return (
+      <Comp
+        ref={ref}
+        className={cn(buttonVariants({ variant, size, className }))}
+        {...props}
+      />
+    );
+  }
+);
+Button.displayName = 'Button';
 
-  const variants = {
-    primary: { background: '#4f46e5', color: '#fff' },
-    secondary: { background: '#f3f4f6', color: '#111827' },
-    outline: { background: 'transparent', color: '#4f46e5', border: '2px solid #4f46e5' },
-    success: { background: '#10b981', color: '#fff' },
-    danger: { background: '#ef4444', color: '#fff' },
-    whatsapp: { background: '#25D366', color: '#fff' },
-    ghost: { background: 'transparent', color: '#6b7280' },
-  };
-
-  const style = { ...base, ...sizes[size], ...variants[variant] };
-
-  return (
-    <button
-      type={type}
-      style={style}
-      disabled={disabled}
-      onClick={onClick}
-      className={className}
-    >
-      {children}
-    </button>
-  );
-}
+export { Button, buttonVariants };
