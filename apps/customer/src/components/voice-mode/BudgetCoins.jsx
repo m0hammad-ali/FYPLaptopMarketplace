@@ -1,30 +1,26 @@
-import { useTextToSpeech } from '../../hooks/useTextToSpeech';
+import { Wallet } from 'lucide-react';
 
-const BUDGET_OPTIONS = [
-  { value: 80000, emoji: '💰', label: 'Under Rs. 80,000' },
-  { value: 150000, emoji: '💰💰', label: 'Under Rs. 1,50,000' },
-  { value: 250000, emoji: '💰💰💰', label: 'Under Rs. 2,50,000' },
-  { value: 400000, emoji: '💰💰💰💰', label: 'Under Rs. 4,00,000' },
-  { value: 700000, emoji: '💰💰💰💰💰', label: 'Rs. 4,00,000+' },
+const BUDGETS = [
+  { value: 80000, label: 'Under Rs. 80,000' },
+  { value: 150000, label: 'Under Rs. 1,50,000' },
+  { value: 250000, label: 'Under Rs. 2,50,000' },
+  { value: 400000, label: 'Under Rs. 4,00,000' },
+  { value: 700000, label: 'Rs. 4,00,000+' },
 ];
 
 export default function BudgetCoins({ onSelect }) {
-  const { speak } = useTextToSpeech();
-
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-      {BUDGET_OPTIONS.map((opt) => (
+    <div className="space-y-3">
+      {BUDGETS.map((b) => (
         <button
-          key={opt.value}
-          className="icon-tile"
-          style={{ display: 'flex', alignItems: 'center', gap: '16px', padding: '16px 20px' }}
-          onClick={() => {
-            speak(opt.label);
-            onSelect(opt.value);
-          }}
+          key={b.value}
+          onClick={() => onSelect(b.value)}
+          className="flex w-full items-center gap-4 rounded-2xl border-2 border-gray-200 bg-white px-6 py-4 text-left transition hover:border-indigo-300 hover:bg-indigo-50"
         >
-          <span style={{ fontSize: '28px' }}>{opt.emoji}</span>
-          <span style={{ fontSize: '15px', fontWeight: 700 }}>{opt.label}</span>
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-100 text-amber-700">
+            <Wallet className="h-6 w-6" />
+          </div>
+          <span className="text-base font-bold text-gray-900">{b.label}</span>
         </button>
       ))}
     </div>
