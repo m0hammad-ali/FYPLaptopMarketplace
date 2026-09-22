@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Toaster } from 'react-hot-toast';
-import { LogOut, Sparkles } from 'lucide-react';
+import { LogOut, Sparkles, Languages } from 'lucide-react';
 import ProtectedRoute from './components/ProtectedRoute';
 import ModeSelector from './components/ModeSelector';
 import VoiceModeForm from './components/voice-mode/VoiceModeForm';
@@ -8,8 +8,10 @@ import SimpleForm from './components/simple-mode/SimpleForm';
 import ProForm from './components/pro-mode/ProForm';
 import ResultCard from './components/ResultCard';
 import client from './api/client';
+import { useLanguage } from './context/LanguageContext';
 
 function Dashboard() {
+  const { lang, toggleLang } = useLanguage();
   const [mode, setMode] = useState(null);
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -41,14 +43,21 @@ function Dashboard() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
       <header className="sticky top-0 z-40 border-b border-gray-200 bg-white">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
           <div className="flex items-center gap-2 font-extrabold text-indigo-600">
             <Sparkles className="h-5 w-5" />
             <span>LaptopMarket</span>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <button
+              onClick={toggleLang}
+              className="inline-flex items-center gap-1.5 rounded-lg bg-gray-100 px-3 py-2 text-xs font-bold text-gray-700 transition hover:bg-gray-200"
+              title="Toggle language"
+            >
+              <Languages className="h-3.5 w-3.5" />
+              {lang === 'en' ? 'اردو' : 'EN'}
+            </button>
             <span className="hidden text-sm text-gray-500 sm:block">
               {localStorage.getItem('userEmail')}
             </span>
@@ -63,7 +72,6 @@ function Dashboard() {
         </div>
       </header>
 
-      {/* Main */}
       <main className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
         {!mode && !searched && <ModeSelector onSelect={setMode} />}
 
