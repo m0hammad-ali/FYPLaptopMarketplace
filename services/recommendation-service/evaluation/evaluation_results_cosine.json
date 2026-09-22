@@ -1,0 +1,120 @@
+{
+  "metric": "cosine",
+  "averages": {
+    "precision@3": 0.933,
+    "precision@5": 0.76,
+    "recall@3": 0.319,
+    "recall@5": 0.359
+  },
+  "per_query": [
+    {
+      "query": 1,
+      "usage": "gaming",
+      "target_category": "gaming",
+      "relevant_count": 25,
+      "top_3": [
+        73,
+        1,
+        71
+      ],
+      "top_5": [
+        73,
+        1,
+        71,
+        40
+      ],
+      "precision@3": 1.0,
+      "precision@5": 1.0,
+      "recall@3": 0.12,
+      "recall@5": 0.16
+    },
+    {
+      "query": 2,
+      "usage": "office",
+      "target_category": "office",
+      "relevant_count": 42,
+      "top_3": [
+        26,
+        22,
+        53
+      ],
+      "top_5": [
+        26,
+        22,
+        53,
+        84,
+        10
+      ],
+      "precision@3": 1.0,
+      "precision@5": 1.0,
+      "recall@3": 0.071,
+      "recall@5": 0.119
+    },
+    {
+      "query": 3,
+      "usage": "ultrabook",
+      "target_category": "ultrabook",
+      "relevant_count": 9,
+      "top_3": [
+        24,
+        60,
+        18
+      ],
+      "top_5": [
+        24,
+        60,
+        18,
+        32,
+        75
+      ],
+      "precision@3": 1.0,
+      "precision@5": 0.8,
+      "recall@3": 0.333,
+      "recall@5": 0.444
+    },
+    {
+      "query": 4,
+      "usage": "workstation",
+      "target_category": "workstation",
+      "relevant_count": 2,
+      "top_3": [
+        72,
+        117,
+        27
+      ],
+      "top_5": [
+        72,
+        117,
+        27,
+        71,
+        103
+      ],
+      "precision@3": 0.667,
+      "precision@5": 0.4,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "query": 5,
+      "usage": "everyday",
+      "target_category": "everyday",
+      "relevant_count": 42,
+      "top_3": [
+        115,
+        109,
+        69
+      ],
+      "top_5": [
+        115,
+        109,
+        69,
+        53,
+        26
+      ],
+      "precision@3": 1.0,
+      "precision@5": 0.6,
+      "recall@3": 0.071,
+      "recall@5": 0.071
+    }
+  ]
+}

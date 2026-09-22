@@ -1,0 +1,121 @@
+{
+  "metric": "cosine",
+  "averages": {
+    "precision@3": 0.933,
+    "precision@5": 0.88,
+    "recall@3": 0.319,
+    "recall@5": 0.399
+  },
+  "per_query": [
+    {
+      "query": 1,
+      "usage": "gaming",
+      "target_category": "gaming",
+      "relevant_count": 25,
+      "top_3": [
+        70,
+        73,
+        1
+      ],
+      "top_5": [
+        70,
+        73,
+        1,
+        71,
+        31
+      ],
+      "precision@3": 1.0,
+      "precision@5": 1.0,
+      "recall@3": 0.12,
+      "recall@5": 0.2
+    },
+    {
+      "query": 2,
+      "usage": "office",
+      "target_category": "office",
+      "relevant_count": 42,
+      "top_3": [
+        12,
+        13,
+        26
+      ],
+      "top_5": [
+        12,
+        13,
+        26,
+        37,
+        39
+      ],
+      "precision@3": 1.0,
+      "precision@5": 1.0,
+      "recall@3": 0.071,
+      "recall@5": 0.119
+    },
+    {
+      "query": 3,
+      "usage": "ultrabook",
+      "target_category": "ultrabook",
+      "relevant_count": 9,
+      "top_3": [
+        18,
+        60,
+        35
+      ],
+      "top_5": [
+        18,
+        60,
+        35,
+        56,
+        24
+      ],
+      "precision@3": 1.0,
+      "precision@5": 1.0,
+      "recall@3": 0.333,
+      "recall@5": 0.556
+    },
+    {
+      "query": 4,
+      "usage": "workstation",
+      "target_category": "workstation",
+      "relevant_count": 2,
+      "top_3": [
+        27,
+        72,
+        117
+      ],
+      "top_5": [
+        27,
+        72,
+        117,
+        116,
+        101
+      ],
+      "precision@3": 0.667,
+      "precision@5": 0.4,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "query": 5,
+      "usage": "everyday",
+      "target_category": "everyday",
+      "relevant_count": 42,
+      "top_3": [
+        111,
+        115,
+        110
+      ],
+      "top_5": [
+        111,
+        115,
+        110,
+        114,
+        109
+      ],
+      "precision@3": 1.0,
+      "precision@5": 1.0,
+      "recall@3": 0.071,
+      "recall@5": 0.119
+    }
+  ]
+}

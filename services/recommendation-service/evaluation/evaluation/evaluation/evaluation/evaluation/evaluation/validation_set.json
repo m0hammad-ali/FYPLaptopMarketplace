@@ -1,0 +1,47 @@
+[
+  {
+    "query": {
+      "budget": 400000,
+      "usage": "gaming",
+      "gpu_min_benchmark": 15000,
+      "top_k": 5
+    },
+    "relevant_ids": [4, 6, 10]
+  },
+  {
+    "query": {
+      "budget": 400000,
+      "usage": "office",
+      "cpu_min_benchmark": 15000,
+      "top_k": 5
+    },
+    "relevant_ids": [2, 5, 9, 11]
+  },
+  {
+    "query": {
+      "budget": 350000,
+      "usage": "ultrabook",
+      "weight_max_kg": 1.4,
+      "battery_min_wh": 55,
+      "top_k": 5
+    },
+    "relevant_ids": [2, 3, 9, 12]
+  },
+  {
+    "query": {
+      "budget": 500000,
+      "usage": "workstation",
+      "ram_min_gb": 16,
+      "top_k": 5
+    },
+    "relevant_ids": [7, 11]
+  },
+  {
+    "query": {
+      "budget": 220000,
+      "usage": "everyday",
+      "top_k": 5
+    },
+    "relevant_ids": [1, 8, 12]
+  }
+]

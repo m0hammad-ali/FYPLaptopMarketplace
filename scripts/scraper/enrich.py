@@ -1,13 +1,14 @@
 """
 Enrich scraped laptops with specifications.
-Uses heuristics based on model name and price bracket.
+Adds variation within categories so cosine vs Euclidean metrics
+produce meaningfully different rankings.
 """
 
+import random
 from utils import log
 
 
-# Benchmark heuristics per category
-CATEGORY_SPECS = {
+CATEGORY_BASE = {
     'gaming': {
         'cpu_model': 'Intel Core i7 (12th Gen)',
         'cpu_benchmark': 24000,
@@ -72,38 +73,46 @@ CATEGORY_SPECS = {
 
 
 def enrich_laptop(laptop):
-    """Add specifications to a scraped laptop dict."""
+    """Add specs with realistic per-laptop variation."""
     category = laptop.get('category', 'everyday')
-    specs = CATEGORY_SPECS[category].copy()
+    specs = CATEGORY_BASE[category].copy()
 
-    price_pkr = laptop.get('price_pkr', 100000)
+    # Add random variation (±25%) to numeric features
+    # Use a seed based on laptop ID for reproducibility
+    seed = laptop.get('id', 0) or hash(laptop.get('model', '')) % 100000
+    rng = random.Random(seed)
 
-    # Adjust specs based on price bracket
-    if price_pkr >= 400000:
-        specs['ram_gb'] = max(specs['ram_gb'], 32)
-        specs['storage_gb'] = max(specs['storage_gb'], 1024)
-        specs['cpu_benchmark'] = int(specs['cpu_benchmark'] * 1.2)
-        specs['gpu_benchmark'] = int(specs['gpu_benchmark'] * 1.3)
-    elif price_pkr >= 250000:
-        specs['ram_gb'] = max(specs['ram_gb'], 16)
-        specs['storage_gb'] = max(specs['storage_gb'], 512)
-    elif price_pkr < 120000:
-        specs['ram_gb'] = min(specs['ram_gb'], 8)
-        specs['storage_gb'] = min(specs['storage_gb'], 256)
-        specs['cpu_benchmark'] = int(specs['cpu_benchmark'] * 0.8)
+    def vary(value, pct=0.25):
+        """Multiply value by a random factor in [1-pct, 1+pct]."""
+        factor = rng.uniform(1 - pct, 1 + pct)
+        return int(value * factor)
+
+    specs['cpu_benchmark'] = vary(specs['cpu_benchmark'], 0.25)
+    specs['gpu_benchmark'] = vary(specs['gpu_benchmark'], 0.25)
+    specs['weight_kg'] = round(specs['weight_kg'] * rng.uniform(0.85, 1.15), 2)
+    specs['battery_wh'] = vary(specs['battery_wh'], 0.20)
+    specs['display_size'] = round(specs['display_size'] + rng.uniform(-0.5, 0.5), 1)
+
+    # RAM variation (discrete steps)
+    if rng.random() < 0.3:
+        specs['ram_gb'] = specs['ram_gb'] * 2 if specs['ram_gb'] <= 16 else specs['ram_gb']
+
+    # Storage variation
+    if rng.random() < 0.4:
+        specs['storage_gb'] = specs['storage_gb'] * 2
 
     # Apple silicon override
     if laptop.get('brand') == 'Apple':
         if 'pro' in laptop['model'].lower():
             specs['cpu_model'] = 'Apple M2 Pro'
-            specs['cpu_benchmark'] = 24000
+            specs['cpu_benchmark'] = vary(24000, 0.10)
             specs['gpu_model'] = 'Apple M2 Pro GPU'
-            specs['gpu_benchmark'] = 15000
+            specs['gpu_benchmark'] = vary(15000, 0.10)
         else:
             specs['cpu_model'] = 'Apple M2'
-            specs['cpu_benchmark'] = 17000
+            specs['cpu_benchmark'] = vary(17000, 0.10)
             specs['gpu_model'] = 'Apple M2 GPU'
-            specs['gpu_benchmark'] = 10000
+            specs['gpu_benchmark'] = vary(10000, 0.10)
 
     laptop['specification'] = specs
     laptop['release_year'] = 2023
@@ -112,7 +121,7 @@ def enrich_laptop(laptop):
 
 def enrich_all(laptops):
     """Enrich every laptop in the list."""
-    log.info(f'Enriching {len(laptops)} laptops...')
+    log.info(f'Enriching {len(laptops)} laptops with variation...')
     enriched = [enrich_laptop(l.copy()) for l in laptops]
-    log.info('Enrichment complete')
+    log.info(f'Enrichment complete')
     return enriched

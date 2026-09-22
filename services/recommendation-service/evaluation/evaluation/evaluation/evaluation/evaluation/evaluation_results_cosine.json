@@ -1,0 +1,122 @@
+{
+  "metric": "cosine",
+  "averages": {
+    "precision@3": 0.0,
+    "precision@5": 0.0,
+    "recall@3": 0.0,
+    "recall@5": 0.0
+  },
+  "per_query": [
+    {
+      "query": 1,
+      "relevant": [
+        4,
+        6,
+        10
+      ],
+      "top_3": [
+        70,
+        73,
+        1
+      ],
+      "top_5": [
+        70,
+        73,
+        1,
+        71,
+        31
+      ],
+      "precision@3": 0.0,
+      "precision@5": 0.0,
+      "recall@3": 0.0,
+      "recall@5": 0.0
+    },
+    {
+      "query": 2,
+      "relevant": [
+        2,
+        5,
+        9,
+        11
+      ],
+      "top_3": [
+        79,
+        42,
+        57
+      ],
+      "top_5": [
+        79,
+        42,
+        57,
+        4,
+        38
+      ],
+      "precision@3": 0.0,
+      "precision@5": 0.0,
+      "recall@3": 0.0,
+      "recall@5": 0.0
+    },
+    {
+      "query": 3,
+      "relevant": [
+        2,
+        3,
+        9,
+        12
+      ],
+      "top_3": [],
+      "top_5": [],
+      "precision@3": 0.0,
+      "precision@5": 0.0,
+      "recall@3": 0.0,
+      "recall@5": 0.0
+    },
+    {
+      "query": 4,
+      "relevant": [
+        7,
+        11
+      ],
+      "top_3": [
+        27,
+        72,
+        65
+      ],
+      "top_5": [
+        27,
+        72,
+        65,
+        108,
+        46
+      ],
+      "precision@3": 0.0,
+      "precision@5": 0.0,
+      "recall@3": 0.0,
+      "recall@5": 0.0
+    },
+    {
+      "query": 5,
+      "relevant": [
+        1,
+        8,
+        12
+      ],
+      "top_3": [
+        114,
+        110,
+        115
+      ],
+      "top_5": [
+        114,
+        110,
+        115,
+        109,
+        111
+      ],
+      "precision@3": 0.0,
+      "precision@5": 0.0,
+      "recall@3": 0.0,
+      "recall@5": 0.0
+    }
+  ]
+}

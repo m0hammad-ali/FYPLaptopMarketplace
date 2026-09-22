@@ -6,17 +6,18 @@
     "price_pkr": 367999,
     "source_url": "https://priceoye.pk/laptops/acer/acer-nitro-v15-ci7-13620h-16gb-512gb-ssd-rtx-5050-8gb",
     "source": "priceoye",
+    "id": 1,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 24000,
+      "cpu_benchmark": 19612,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 16000,
+      "gpu_benchmark": 18779,
       "ram_gb": 16,
       "storage_gb": 512,
       "storage_type": "NVMe SSD",
       "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "weight_kg": 2.48,
+      "battery_wh": 63
     },
     "release_year": 2023
   },
@@ -27,17 +28,18 @@
     "price_pkr": 352499,
     "source_url": "https://priceoye.pk/laptops/apple/apple-macbook-mrxw3-m3-chip",
     "source": "priceoye",
+    "id": 2,
     "specification": {
       "cpu_model": "Apple M2",
-      "cpu_benchmark": 17000,
+      "cpu_benchmark": 16347,
       "gpu_model": "Apple M2 GPU",
-      "gpu_benchmark": 10000,
+      "gpu_benchmark": 10211,
       "ram_gb": 16,
       "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 13.5,
-      "weight_kg": 1.3,
-      "battery_wh": 60
+      "display_size": 13.8,
+      "weight_kg": 1.13,
+      "battery_wh": 50
     },
     "release_year": 2023
   },
@@ -48,17 +50,18 @@
     "price_pkr": 177999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-ideapad-slim-3-core-i5-13th-gen-8gb-512gb",
     "source": "priceoye",
+    "id": 3,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 13034,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
-      "ram_gb": 16,
-      "storage_gb": 512,
+      "gpu_benchmark": 3066,
+      "ram_gb": 32,
+      "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 14.1,
+      "weight_kg": 1.44,
+      "battery_wh": 57
     },
     "release_year": 2023
   },
@@ -69,17 +72,18 @@
     "price_pkr": 279999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkpad-e16-g3-ultra-5-225u-8gb-512gb-ssd",
     "source": "priceoye",
+    "id": 4,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 13020,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 2404,
       "ram_gb": 16,
       "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 13.6,
+      "weight_kg": 1.45,
+      "battery_wh": 47
     },
     "release_year": 2023
   },
@@ -90,17 +94,18 @@
     "price_pkr": 172999,
     "source_url": "https://priceoye.pk/laptops/dell/dell-15-dc15250-ci5-1334u-8gb-512gb-ssd",
     "source": "priceoye",
+    "id": 5,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 12737,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
+      "gpu_benchmark": 2802,
       "ram_gb": 8,
-      "storage_gb": 256,
+      "storage_gb": 512,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.8,
+      "weight_kg": 1.96,
+      "battery_wh": 52
     },
     "release_year": 2023
   },
@@ -111,17 +116,18 @@
     "price_pkr": 187999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-v15-g4-core-i5-13th-generation",
     "source": "priceoye",
+    "id": 6,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 13760,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
+      "gpu_benchmark": 2902,
       "ram_gb": 8,
       "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.1,
+      "weight_kg": 1.79,
+      "battery_wh": 40
     },
     "release_year": 2023
   },
@@ -132,17 +138,18 @@
     "price_pkr": 268999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-probook-460-g11-notebook-pc-intel-core-ultra-7-processor-155u-8gb-512gb",
     "source": "priceoye",
+    "id": 7,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 13678,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 2476,
       "ram_gb": 16,
-      "storage_gb": 512,
+      "storage_gb": 1024,
       "storage_type": "NVMe SSD",
       "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "weight_kg": 1.57,
+      "battery_wh": 45
     },
     "release_year": 2023
   },
@@ -153,17 +160,18 @@
     "price_pkr": 254999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkpad-e16-gen-2-intel-core-ultra-5-8gb-512gb",
     "source": "priceoye",
+    "id": 8,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 12950,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
-      "ram_gb": 16,
+      "gpu_benchmark": 3693,
+      "ram_gb": 32,
       "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 13.6,
+      "weight_kg": 1.33,
+      "battery_wh": 59
     },
     "release_year": 2023
   },
@@ -174,17 +182,18 @@
     "price_pkr": 365999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkpad-e16-g3-ultra-7-255h-16gb-512gb-ssd",
     "source": "priceoye",
+    "id": 9,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 14722,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 2809,
       "ram_gb": 16,
       "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 13.5,
+      "weight_kg": 1.34,
+      "battery_wh": 63
     },
     "release_year": 2023
   },
@@ -195,17 +204,18 @@
     "price_pkr": 238999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-probook-460-g11-intel-core-ultra-5-125u-8gb-512gb",
     "source": "priceoye",
+    "id": 10,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 15535,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 2893,
       "ram_gb": 16,
       "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 14.3,
+      "weight_kg": 1.54,
+      "battery_wh": 48
     },
     "release_year": 2023
   },
@@ -216,17 +226,18 @@
     "price_pkr": 197999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkbook-15-g2-15-6-inches-11th-gen-core-i7-dos-8gb-256gb",
     "source": "priceoye",
+    "id": 11,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 11714,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
+      "gpu_benchmark": 2574,
       "ram_gb": 8,
-      "storage_gb": 256,
+      "storage_gb": 512,
       "storage_type": "SATA SSD",
       "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "weight_kg": 2.03,
+      "battery_wh": 44
     },
     "release_year": 2023
   },
@@ -237,17 +248,18 @@
     "price_pkr": 229999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkpad-e14-g4-14-inches-12th-gen-core-i5-dos-8gb-512gb",
     "source": "priceoye",
+    "id": 12,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 14809,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 3236,
       "ram_gb": 16,
-      "storage_gb": 512,
+      "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 13.5,
+      "weight_kg": 1.57,
+      "battery_wh": 47
     },
     "release_year": 2023
   },
@@ -258,17 +270,18 @@
     "price_pkr": 230999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkpad-e14-g4-14-inches-12th-gen-core-i7-backlit-keyboard-dos-8gb-512gb",
     "source": "priceoye",
+    "id": 13,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 13192,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
-      "ram_gb": 16,
-      "storage_gb": 512,
+      "gpu_benchmark": 3277,
+      "ram_gb": 32,
+      "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 13.7,
+      "weight_kg": 1.58,
+      "battery_wh": 62
     },
     "release_year": 2023
   },
@@ -279,17 +292,18 @@
     "price_pkr": 192999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-v15-g3-15-6-inches-12th-gen-core-i7-dos-8gb-512gb",
     "source": "priceoye",
+    "id": 14,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 9640,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
-      "ram_gb": 8,
+      "gpu_benchmark": 2753,
+      "ram_gb": 16,
       "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.4,
+      "weight_kg": 1.88,
+      "battery_wh": 52
     },
     "release_year": 2023
   },
@@ -300,17 +314,18 @@
     "price_pkr": 202999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkbook-15-g2-15-6-inches-11th-gen-core-i7-dos-8gb-1tb",
     "source": "priceoye",
+    "id": 15,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 14791,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
-      "ram_gb": 8,
+      "gpu_benchmark": 1889,
+      "ram_gb": 16,
       "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 16.1,
+      "weight_kg": 1.93,
+      "battery_wh": 38
     },
     "release_year": 2023
   },
@@ -321,17 +336,18 @@
     "price_pkr": 242999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkpad-e15-g4-15-6-inches-12th-gen-core-i7-backlit-keyboard-8gb-512gb",
     "source": "priceoye",
+    "id": 16,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 13961,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 2970,
       "ram_gb": 16,
-      "storage_gb": 512,
+      "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 13.9,
+      "weight_kg": 1.46,
+      "battery_wh": 53
     },
     "release_year": 2023
   },
@@ -342,17 +358,18 @@
     "price_pkr": 199999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-probook-450-g9-15-6-inches-12th-gen-core-i5-dos-8gb-512gb",
     "source": "priceoye",
+    "id": 17,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 15164,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 3460,
       "ram_gb": 16,
       "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 14.3,
+      "weight_kg": 1.71,
+      "battery_wh": 50
     },
     "release_year": 2023
   },
@@ -363,17 +380,18 @@
     "price_pkr": 526999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkpad-x1-carbon-g12-ultra-7-32gb-512gb-ssd",
     "source": "priceoye",
+    "id": 18,
     "specification": {
       "cpu_model": "Intel Core i7 (13th Gen)",
-      "cpu_benchmark": 20400,
+      "cpu_benchmark": 14290,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 5200,
-      "ram_gb": 32,
-      "storage_gb": 1024,
+      "gpu_benchmark": 4322,
+      "ram_gb": 16,
+      "storage_gb": 512,
       "storage_type": "NVMe SSD",
       "display_size": 13.5,
-      "weight_kg": 1.3,
-      "battery_wh": 60
+      "weight_kg": 1.24,
+      "battery_wh": 52
     },
     "release_year": 2023
   },
@@ -384,16 +402,17 @@
     "price_pkr": 343999,
     "source_url": "https://priceoye.pk/laptops/dell/dell-latitude-15-5540-15-6-inches-13th-gen-core-i7-dos-8gb-512gb",
     "source": "priceoye",
+    "id": 19,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 16328,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 3427,
       "ram_gb": 16,
-      "storage_gb": 512,
+      "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
+      "display_size": 13.9,
+      "weight_kg": 1.51,
       "battery_wh": 55
     },
     "release_year": 2023
@@ -405,17 +424,18 @@
     "price_pkr": 339999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-pavilion-15-eg3020tx-15-6-inches-13th-gen-core-i7-win-11-16gb-512gb",
     "source": "priceoye",
+    "id": 20,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 14433,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
-      "ram_gb": 16,
-      "storage_gb": 512,
+      "gpu_benchmark": 2732,
+      "ram_gb": 8,
+      "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.4,
+      "weight_kg": 1.94,
+      "battery_wh": 52
     },
     "release_year": 2023
   },
@@ -426,17 +446,18 @@
     "price_pkr": 204999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkbook-15-g2-1135g7-15-6-inches-11th-gen-core-i5-dos-8gb-1tb",
     "source": "priceoye",
+    "id": 21,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 9989,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
+      "gpu_benchmark": 2737,
       "ram_gb": 8,
       "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.3,
+      "weight_kg": 1.87,
+      "battery_wh": 44
     },
     "release_year": 2023
   },
@@ -447,17 +468,18 @@
     "price_pkr": 251999,
     "source_url": "https://priceoye.pk/laptops/dell/dell-latitude-15-3540-15-6-inches-13th-gen-core-i7-dos-8gb-512gb",
     "source": "priceoye",
+    "id": 22,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 18436,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
-      "ram_gb": 16,
+      "gpu_benchmark": 2460,
+      "ram_gb": 32,
       "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 13.7,
+      "weight_kg": 1.29,
+      "battery_wh": 65
     },
     "release_year": 2023
   },
@@ -468,17 +490,18 @@
     "price_pkr": 258999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-pavilion-15-eg3002tx-15-6-inches-13th-gen-core-i5-win-11-8gb-512gb",
     "source": "priceoye",
+    "id": 23,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 14549,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
-      "ram_gb": 16,
-      "storage_gb": 512,
+      "gpu_benchmark": 3060,
+      "ram_gb": 8,
+      "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.7,
+      "weight_kg": 2.01,
+      "battery_wh": 37
     },
     "release_year": 2023
   },
@@ -489,17 +512,18 @@
     "price_pkr": 409999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-envy-16-h1008tx-16-inches-13th-gen-core-i5-win-11-16gb-512gb",
     "source": "priceoye",
+    "id": 24,
     "specification": {
       "cpu_model": "Intel Core i7 (13th Gen)",
-      "cpu_benchmark": 20400,
+      "cpu_benchmark": 18804,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 5200,
-      "ram_gb": 32,
+      "gpu_benchmark": 4679,
+      "ram_gb": 16,
       "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 13.5,
-      "weight_kg": 1.3,
-      "battery_wh": 60
+      "display_size": 13.2,
+      "weight_kg": 1.18,
+      "battery_wh": 71
     },
     "release_year": 2023
   },
@@ -510,17 +534,18 @@
     "price_pkr": 179999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-v15-g3-15-6-inches-12th-gen-core-i5-dos-4gb-256gb",
     "source": "priceoye",
+    "id": 25,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 11261,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
+      "gpu_benchmark": 3033,
       "ram_gb": 8,
-      "storage_gb": 256,
+      "storage_gb": 512,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 16.0,
+      "weight_kg": 1.99,
+      "battery_wh": 39
     },
     "release_year": 2023
   },
@@ -531,17 +556,18 @@
     "price_pkr": 220999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-probook-440-g10-core-i7-8gb-512gb-nvme-ssd",
     "source": "priceoye",
+    "id": 26,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 16854,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 2554,
       "ram_gb": 16,
       "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 13.6,
+      "weight_kg": 1.37,
+      "battery_wh": 57
     },
     "release_year": 2023
   },
@@ -552,17 +578,18 @@
     "price_pkr": 452999,
     "source_url": "https://priceoye.pk/laptops/apple/apple-macbook-pro-14-mtl73-8gb-512gb",
     "source": "priceoye",
+    "id": 27,
     "specification": {
       "cpu_model": "Apple M2 Pro",
-      "cpu_benchmark": 24000,
+      "cpu_benchmark": 23387,
       "gpu_model": "Apple M2 Pro GPU",
-      "gpu_benchmark": 15000,
+      "gpu_benchmark": 15944,
       "ram_gb": 32,
-      "storage_gb": 1024,
+      "storage_gb": 2048,
       "storage_type": "NVMe SSD",
-      "display_size": 15.0,
-      "weight_kg": 1.8,
-      "battery_wh": 75
+      "display_size": 14.6,
+      "weight_kg": 2.05,
+      "battery_wh": 65
     },
     "release_year": 2023
   },
@@ -573,17 +600,18 @@
     "price_pkr": 149999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-v15-g4-core-i3-13th-gen-4gb-256gb",
     "source": "priceoye",
+    "id": 28,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 9677,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
+      "gpu_benchmark": 2038,
       "ram_gb": 8,
       "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.2,
+      "weight_kg": 1.85,
+      "battery_wh": 39
     },
     "release_year": 2023
   },
@@ -594,17 +622,18 @@
     "price_pkr": 195999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-250-g10-raptor-lake-13th-gen-core-i5-8gb-512gb-ssd",
     "source": "priceoye",
+    "id": 29,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 12288,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
+      "gpu_benchmark": 2307,
       "ram_gb": 8,
       "storage_gb": 256,
       "storage_type": "SATA SSD",
       "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "weight_kg": 1.99,
+      "battery_wh": 41
     },
     "release_year": 2023
   },
@@ -615,17 +644,18 @@
     "price_pkr": 258999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-probook-450-g10-13th-gen-core-i7-8gb-512gb",
     "source": "priceoye",
+    "id": 30,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 15293,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
-      "ram_gb": 16,
-      "storage_gb": 512,
+      "gpu_benchmark": 2683,
+      "ram_gb": 32,
+      "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 13.7,
+      "weight_kg": 1.29,
+      "battery_wh": 58
     },
     "release_year": 2023
   },
@@ -636,17 +666,18 @@
     "price_pkr": 359000,
     "source_url": "https://priceoye.pk/laptops/asus/asus-tuf-fx507vv-ci7-13620h-16gb-512gb-rtx-4060-8gb",
     "source": "priceoye",
+    "id": 31,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 24000,
+      "cpu_benchmark": 18147,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 16000,
-      "ram_gb": 16,
-      "storage_gb": 512,
+      "gpu_benchmark": 12899,
+      "ram_gb": 32,
+      "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "display_size": 15.2,
+      "weight_kg": 2.23,
+      "battery_wh": 75
     },
     "release_year": 2023
   },
@@ -657,17 +688,18 @@
     "price_pkr": 354999,
     "source_url": "https://priceoye.pk/laptops/apple/apple-macbook-air-13-6-m2-chip-mly43-8-512gb",
     "source": "priceoye",
+    "id": 32,
     "specification": {
       "cpu_model": "Apple M2",
-      "cpu_benchmark": 17000,
+      "cpu_benchmark": 17030,
       "gpu_model": "Apple M2 GPU",
-      "gpu_benchmark": 10000,
+      "gpu_benchmark": 10686,
       "ram_gb": 16,
-      "storage_gb": 512,
+      "storage_gb": 1024,
       "storage_type": "NVMe SSD",
       "display_size": 13.5,
-      "weight_kg": 1.3,
-      "battery_wh": 60
+      "weight_kg": 1.22,
+      "battery_wh": 69
     },
     "release_year": 2023
   },
@@ -678,17 +710,18 @@
     "price_pkr": 279999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkbook-14-13th-gen-core-i7-8gb-512gb",
     "source": "priceoye",
+    "id": 33,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 12421,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
-      "ram_gb": 16,
-      "storage_gb": 512,
+      "gpu_benchmark": 2665,
+      "ram_gb": 8,
+      "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.8,
+      "weight_kg": 1.97,
+      "battery_wh": 40
     },
     "release_year": 2023
   },
@@ -699,17 +732,18 @@
     "price_pkr": 269999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkbook-16-14th-core-7-8gb-512gb-ssd",
     "source": "priceoye",
+    "id": 34,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 12173,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
-      "ram_gb": 16,
-      "storage_gb": 512,
+      "gpu_benchmark": 2607,
+      "ram_gb": 8,
+      "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 16.0,
+      "weight_kg": 1.99,
+      "battery_wh": 52
     },
     "release_year": 2023
   },
@@ -720,17 +754,18 @@
     "price_pkr": 495999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-spectre-14-eu0008ni-ultra-7-16gb-1tb-oled-plus-hp-pen",
     "source": "priceoye",
+    "id": 35,
     "specification": {
       "cpu_model": "Intel Core i7 (13th Gen)",
-      "cpu_benchmark": 20400,
+      "cpu_benchmark": 17413,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 5200,
-      "ram_gb": 32,
-      "storage_gb": 1024,
+      "gpu_benchmark": 4501,
+      "ram_gb": 16,
+      "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 13.5,
-      "weight_kg": 1.3,
-      "battery_wh": 60
+      "display_size": 13.3,
+      "weight_kg": 1.4,
+      "battery_wh": 68
     },
     "release_year": 2023
   },
@@ -741,17 +776,18 @@
     "price_pkr": 315999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-ideapad-slim-3-13th-gen-core-i7-dos-16gb-512gb",
     "source": "priceoye",
+    "id": 36,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 13715,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 3724,
       "ram_gb": 16,
-      "storage_gb": 512,
+      "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 14.3,
+      "weight_kg": 1.71,
+      "battery_wh": 64
     },
     "release_year": 2023
   },
@@ -762,17 +798,18 @@
     "price_pkr": 237999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkpad-e15-g4-14-inches-13th-gen-core-i5-8gb-512gb",
     "source": "priceoye",
+    "id": 37,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 16365,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 2387,
       "ram_gb": 16,
       "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 14.3,
+      "weight_kg": 1.55,
+      "battery_wh": 62
     },
     "release_year": 2023
   },
@@ -783,17 +820,18 @@
     "price_pkr": 277999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkpad-e15-g5-14-inches-13th-gen-core-i7-8gb-512gb",
     "source": "priceoye",
+    "id": 38,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 16046,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 2893,
       "ram_gb": 16,
       "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 14.2,
+      "weight_kg": 1.6,
+      "battery_wh": 45
     },
     "release_year": 2023
   },
@@ -804,17 +842,18 @@
     "price_pkr": 237999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkpad-e16-g1-14-inches-13th-gen-core-i7-8gb-512gb",
     "source": "priceoye",
+    "id": 39,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 12823,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 2828,
       "ram_gb": 16,
-      "storage_gb": 512,
+      "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 14.1,
+      "weight_kg": 1.36,
+      "battery_wh": 52
     },
     "release_year": 2023
   },
@@ -825,17 +864,18 @@
     "price_pkr": 392999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-omen-16-wd0073dx-ci7-13620h-16gb-1tb-rtx-4060-8gb",
     "source": "priceoye",
+    "id": 40,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 24000,
+      "cpu_benchmark": 23503,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 16000,
+      "gpu_benchmark": 19022,
       "ram_gb": 16,
-      "storage_gb": 512,
+      "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "display_size": 16.1,
+      "weight_kg": 1.98,
+      "battery_wh": 63
     },
     "release_year": 2023
   },
@@ -846,17 +886,18 @@
     "price_pkr": 243999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkpad-e14-g5-13th-gen-core-i5-1335u-8gb-512gb",
     "source": "priceoye",
+    "id": 41,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 14107,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 2596,
       "ram_gb": 16,
       "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 14.1,
+      "weight_kg": 1.35,
+      "battery_wh": 64
     },
     "release_year": 2023
   },
@@ -867,17 +908,18 @@
     "price_pkr": 285999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkpad-e14-g5-13th-gen-core-i7-1355u-8gb-512gb",
     "source": "priceoye",
+    "id": 42,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 16045,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 2287,
       "ram_gb": 16,
       "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 14.2,
+      "weight_kg": 1.4,
+      "battery_wh": 48
     },
     "release_year": 2023
   },
@@ -888,17 +930,18 @@
     "price_pkr": 310999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-probook-460-g11-ultra-7-155u",
     "source": "priceoye",
+    "id": 43,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 11539,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 3294,
       "ram_gb": 16,
       "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 14.2,
+      "weight_kg": 1.34,
+      "battery_wh": 54
     },
     "release_year": 2023
   },
@@ -909,17 +952,18 @@
     "price_pkr": 338999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-elitebook-640-g11-14-ultra-7-155u-8gb-512gb",
     "source": "priceoye",
+    "id": 44,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 14314,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
-      "ram_gb": 16,
-      "storage_gb": 512,
+      "gpu_benchmark": 3062,
+      "ram_gb": 32,
+      "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 13.7,
+      "weight_kg": 1.66,
+      "battery_wh": 47
     },
     "release_year": 2023
   },
@@ -930,17 +974,18 @@
     "price_pkr": 317999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-elitebook-660-g11-intel-core-ultra-7-155u-8gb-512gb",
     "source": "priceoye",
+    "id": 45,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 13289,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
-      "ram_gb": 16,
-      "storage_gb": 512,
+      "gpu_benchmark": 2982,
+      "ram_gb": 32,
+      "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 13.6,
+      "weight_kg": 1.31,
+      "battery_wh": 51
     },
     "release_year": 2023
   },
@@ -951,17 +996,18 @@
     "price_pkr": 419999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-omen-16-ap0167ax-r9-8940hx-16gb-512gb-rtx-5060-8gb",
     "source": "priceoye",
+    "id": 46,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 28800,
+      "cpu_benchmark": 28659,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 20800,
-      "ram_gb": 32,
-      "storage_gb": 1024,
+      "gpu_benchmark": 15199,
+      "ram_gb": 16,
+      "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "display_size": 15.3,
+      "weight_kg": 2.36,
+      "battery_wh": 80
     },
     "release_year": 2023
   },
@@ -972,17 +1018,18 @@
     "price_pkr": 197999,
     "source_url": "https://priceoye.pk/laptops/dell/dell-vostro-15-3530-laptop-core-i7-1355u-8gb-512gb",
     "source": "priceoye",
+    "id": 47,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 11111,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
+      "gpu_benchmark": 2412,
       "ram_gb": 8,
-      "storage_gb": 256,
+      "storage_gb": 512,
       "storage_type": "SATA SSD",
       "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "weight_kg": 1.77,
+      "battery_wh": 42
     },
     "release_year": 2023
   },
@@ -993,17 +1040,18 @@
     "price_pkr": 228999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkbook-16-g8-intel-core-ultra-5-225u",
     "source": "priceoye",
+    "id": 48,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 12288,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
-      "ram_gb": 8,
+      "gpu_benchmark": 2039,
+      "ram_gb": 16,
       "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 16.0,
+      "weight_kg": 1.91,
+      "battery_wh": 41
     },
     "release_year": 2023
   },
@@ -1014,17 +1062,18 @@
     "price_pkr": 246999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkpad-e14-intel-core-ultra-5-8gb-512gb",
     "source": "priceoye",
+    "id": 49,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 11751,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
-      "ram_gb": 16,
-      "storage_gb": 512,
+      "gpu_benchmark": 2869,
+      "ram_gb": 32,
+      "storage_gb": 1024,
       "storage_type": "NVMe SSD",
       "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "weight_kg": 1.32,
+      "battery_wh": 60
     },
     "release_year": 2023
   },
@@ -1035,17 +1084,18 @@
     "price_pkr": 499999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-legion-pro-5-ci7-14650hx-16gb-1tb-rtx-4060-8gb",
     "source": "priceoye",
+    "id": 50,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 28800,
+      "cpu_benchmark": 23970,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 20800,
-      "ram_gb": 32,
+      "gpu_benchmark": 14129,
+      "ram_gb": 16,
       "storage_gb": 1024,
       "storage_type": "NVMe SSD",
       "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "weight_kg": 2.39,
+      "battery_wh": 62
     },
     "release_year": 2023
   },
@@ -1056,17 +1106,18 @@
     "price_pkr": 184999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkbook-15g2-11th-gen-core-i7-d0s",
     "source": "priceoye",
+    "id": 51,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 10461,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
+      "gpu_benchmark": 2502,
       "ram_gb": 8,
       "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.3,
+      "weight_kg": 1.62,
+      "battery_wh": 50
     },
     "release_year": 2023
   },
@@ -1077,17 +1128,18 @@
     "price_pkr": 388999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkpad-t14-13th-gen-core-i7-dos",
     "source": "priceoye",
+    "id": 52,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 18587,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 2331,
       "ram_gb": 16,
       "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 14.4,
+      "weight_kg": 1.6,
+      "battery_wh": 54
     },
     "release_year": 2023
   },
@@ -1098,17 +1150,18 @@
     "price_pkr": 242999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-elitebook-650-g10-13th-gen-core-i5-1335u",
     "source": "priceoye",
+    "id": 53,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 15878,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 3585,
       "ram_gb": 16,
       "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 14.4,
+      "weight_kg": 1.48,
+      "battery_wh": 59
     },
     "release_year": 2023
   },
@@ -1119,17 +1172,18 @@
     "price_pkr": 309999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-probook-440-g10-13th-gen-core-i5-1335u",
     "source": "priceoye",
+    "id": 54,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 18102,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 2456,
       "ram_gb": 16,
       "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 14.5,
+      "weight_kg": 1.53,
+      "battery_wh": 54
     },
     "release_year": 2023
   },
@@ -1140,17 +1194,18 @@
     "price_pkr": 273999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-probook-440-g10-13th-gen-core-i7-16-gb-ram-512-gb-ssd",
     "source": "priceoye",
+    "id": 55,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 11927,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 3675,
       "ram_gb": 16,
-      "storage_gb": 512,
+      "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 14.3,
+      "weight_kg": 1.34,
+      "battery_wh": 60
     },
     "release_year": 2023
   },
@@ -1161,16 +1216,17 @@
     "price_pkr": 411999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-envy-16-h1010tx-gen-13th-core-i7",
     "source": "priceoye",
+    "id": 56,
     "specification": {
       "cpu_model": "Intel Core i7 (13th Gen)",
-      "cpu_benchmark": 20400,
+      "cpu_benchmark": 20960,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 5200,
-      "ram_gb": 32,
-      "storage_gb": 1024,
+      "gpu_benchmark": 4119,
+      "ram_gb": 16,
+      "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 13.5,
-      "weight_kg": 1.3,
+      "display_size": 13.8,
+      "weight_kg": 1.29,
       "battery_wh": 60
     },
     "release_year": 2023
@@ -1182,16 +1238,17 @@
     "price_pkr": 283999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-probook-440-g11-ultra-5-125u-14-inches-8gb-ram-512-ssd",
     "source": "priceoye",
+    "id": 57,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 11569,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
-      "ram_gb": 16,
+      "gpu_benchmark": 3134,
+      "ram_gb": 32,
       "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
+      "display_size": 14.5,
+      "weight_kg": 1.28,
       "battery_wh": 55
     },
     "release_year": 2023
@@ -1203,17 +1260,18 @@
     "price_pkr": 277999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-elitebook",
     "source": "priceoye",
+    "id": 58,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 15605,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 2558,
       "ram_gb": 16,
-      "storage_gb": 512,
+      "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 13.5,
+      "weight_kg": 1.56,
+      "battery_wh": 64
     },
     "release_year": 2023
   },
@@ -1224,17 +1282,18 @@
     "price_pkr": 277999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-elitebook-660-g11-ultra-5-125u",
     "source": "priceoye",
+    "id": 59,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 12931,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 3648,
       "ram_gb": 16,
       "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 14.3,
+      "weight_kg": 1.7,
+      "battery_wh": 44
     },
     "release_year": 2023
   },
@@ -1245,17 +1304,18 @@
     "price_pkr": 519999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-spectre-14-eu0000-ultra-7-32gb-2tb-oled-plus-hp-pen",
     "source": "priceoye",
+    "id": 60,
     "specification": {
       "cpu_model": "Intel Core i7 (13th Gen)",
-      "cpu_benchmark": 20400,
+      "cpu_benchmark": 15366,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 5200,
-      "ram_gb": 32,
-      "storage_gb": 1024,
+      "gpu_benchmark": 4155,
+      "ram_gb": 16,
+      "storage_gb": 512,
       "storage_type": "NVMe SSD",
       "display_size": 13.5,
-      "weight_kg": 1.3,
-      "battery_wh": 60
+      "weight_kg": 1.21,
+      "battery_wh": 67
     },
     "release_year": 2023
   },
@@ -1266,17 +1326,18 @@
     "price_pkr": 359999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkbook-16-g8-ultra-7-255h",
     "source": "priceoye",
+    "id": 61,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 11966,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
-      "ram_gb": 16,
-      "storage_gb": 512,
+      "gpu_benchmark": 2570,
+      "ram_gb": 8,
+      "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.4,
+      "weight_kg": 1.97,
+      "battery_wh": 41
     },
     "release_year": 2023
   },
@@ -1287,17 +1348,18 @@
     "price_pkr": 412999,
     "source_url": "https://priceoye.pk/laptops/apple/apple-macbook-air-mxcv3-m3-8-core-chip",
     "source": "priceoye",
+    "id": 62,
     "specification": {
       "cpu_model": "Apple M2",
-      "cpu_benchmark": 17000,
+      "cpu_benchmark": 17027,
       "gpu_model": "Apple M2 GPU",
-      "gpu_benchmark": 10000,
-      "ram_gb": 32,
+      "gpu_benchmark": 9323,
+      "ram_gb": 16,
       "storage_gb": 1024,
       "storage_type": "NVMe SSD",
       "display_size": 13.5,
-      "weight_kg": 1.3,
-      "battery_wh": 60
+      "weight_kg": 1.48,
+      "battery_wh": 53
     },
     "release_year": 2023
   },
@@ -1308,17 +1370,18 @@
     "price_pkr": 422500,
     "source_url": "https://priceoye.pk/laptops/infinix/infinix-gtbook-13th-generation-core-i9-1tb",
     "source": "priceoye",
+    "id": 63,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 14400,
+      "cpu_benchmark": 11670,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 3250,
-      "ram_gb": 32,
-      "storage_gb": 1024,
+      "gpu_benchmark": 2242,
+      "ram_gb": 8,
+      "storage_gb": 512,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.2,
+      "weight_kg": 2.02,
+      "battery_wh": 44
     },
     "release_year": 2023
   },
@@ -1329,17 +1392,18 @@
     "price_pkr": 259999,
     "source_url": "https://priceoye.pk/laptops/dell/dell-inspiron-16-5640-intel-core-7-150u-16gb-1tb-ssd",
     "source": "priceoye",
+    "id": 64,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 11856,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
-      "ram_gb": 16,
-      "storage_gb": 512,
+      "gpu_benchmark": 2662,
+      "ram_gb": 8,
+      "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.1,
+      "weight_kg": 1.75,
+      "battery_wh": 52
     },
     "release_year": 2023
   },
@@ -1350,17 +1414,18 @@
     "price_pkr": 442999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-omen-16-ae0073cl-ci7-14650hx-32gb-1tb-rtx-4060-8gb",
     "source": "priceoye",
+    "id": 65,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 28800,
+      "cpu_benchmark": 22976,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 20800,
-      "ram_gb": 32,
+      "gpu_benchmark": 14301,
+      "ram_gb": 16,
       "storage_gb": 1024,
       "storage_type": "NVMe SSD",
       "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "weight_kg": 2.54,
+      "battery_wh": 68
     },
     "release_year": 2023
   },
@@ -1371,17 +1436,18 @@
     "price_pkr": 325999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-victus-15-fb3093dx-r7-7445hs-16gb-512gb-rtx-4050-6gb",
     "source": "priceoye",
+    "id": 66,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 9424,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
-      "ram_gb": 16,
-      "storage_gb": 512,
+      "gpu_benchmark": 2418,
+      "ram_gb": 8,
+      "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.4,
+      "weight_kg": 1.66,
+      "battery_wh": 44
     },
     "release_year": 2023
   },
@@ -1392,17 +1458,18 @@
     "price_pkr": 227999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkbook-14-g7-14th-gen-core-ultra-5-125u-8gb-ddr5-512gb-ssd",
     "source": "priceoye",
+    "id": 67,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 9448,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
+      "gpu_benchmark": 2832,
       "ram_gb": 8,
       "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 16.0,
+      "weight_kg": 2.05,
+      "battery_wh": 43
     },
     "release_year": 2023
   },
@@ -1413,17 +1480,18 @@
     "price_pkr": 235999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkbook-14-g7-14th-gen-core-ultra-7-155h-8gb-512gb-ssd",
     "source": "priceoye",
+    "id": 68,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 13450,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
+      "gpu_benchmark": 3051,
       "ram_gb": 8,
       "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.2,
+      "weight_kg": 1.93,
+      "battery_wh": 52
     },
     "release_year": 2023
   },
@@ -1434,17 +1502,18 @@
     "price_pkr": 199999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkbook-16-g7-14th-gen-core-ultra-5-125u-8gb-512gb-ssd",
     "source": "priceoye",
+    "id": 69,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 13105,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
+      "gpu_benchmark": 1994,
       "ram_gb": 8,
       "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.4,
+      "weight_kg": 1.62,
+      "battery_wh": 46
     },
     "release_year": 2023
   },
@@ -1455,17 +1524,18 @@
     "price_pkr": 312999,
     "source_url": "https://priceoye.pk/laptops/acer/acer-nitro-v15-13th-gen-core-i9-13900h-16gb-512gb-ssd",
     "source": "priceoye",
+    "id": 70,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 24000,
+      "cpu_benchmark": 28917,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 16000,
-      "ram_gb": 16,
+      "gpu_benchmark": 14352,
+      "ram_gb": 32,
       "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "display_size": 16.1,
+      "weight_kg": 2.27,
+      "battery_wh": 59
     },
     "release_year": 2023
   },
@@ -1476,17 +1546,18 @@
     "price_pkr": 376999,
     "source_url": "https://priceoye.pk/laptops/acer/acer-nitro-v15-13th-gen-core-i9-13900h-16gb-512gb-ssd-rtx-4060-8gb-graphics",
     "source": "priceoye",
+    "id": 71,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 24000,
+      "cpu_benchmark": 21885,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 16000,
+      "gpu_benchmark": 16960,
       "ram_gb": 16,
-      "storage_gb": 512,
+      "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "display_size": 15.9,
+      "weight_kg": 1.96,
+      "battery_wh": 83
     },
     "release_year": 2023
   },
@@ -1497,17 +1568,18 @@
     "price_pkr": 494999,
     "source_url": "https://priceoye.pk/laptops/apple/apple-macbook-pro-m3-a2918-8gb-512gb-ssd",
     "source": "priceoye",
+    "id": 72,
     "specification": {
       "cpu_model": "Apple M2 Pro",
-      "cpu_benchmark": 24000,
+      "cpu_benchmark": 24890,
       "gpu_model": "Apple M2 Pro GPU",
-      "gpu_benchmark": 15000,
+      "gpu_benchmark": 15296,
       "ram_gb": 32,
       "storage_gb": 1024,
       "storage_type": "NVMe SSD",
       "display_size": 15.0,
-      "weight_kg": 1.8,
-      "battery_wh": 75
+      "weight_kg": 2.06,
+      "battery_wh": 70
     },
     "release_year": 2023
   },
@@ -1518,17 +1590,18 @@
     "price_pkr": 349999,
     "source_url": "https://priceoye.pk/laptops/acer/acer-nitro-v16-14th-gen-core-i7-14650hx-16gb-512gb-ssd",
     "source": "priceoye",
+    "id": 73,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 24000,
+      "cpu_benchmark": 21357,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 16000,
+      "gpu_benchmark": 16017,
       "ram_gb": 16,
       "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "display_size": 15.7,
+      "weight_kg": 2.34,
+      "battery_wh": 68
     },
     "release_year": 2023
   },
@@ -1539,17 +1612,18 @@
     "price_pkr": 400999,
     "source_url": "https://priceoye.pk/laptops/asus/asus-rog-strix-g614j-13th-ci7-13650hx-32gb-1tb-ssd",
     "source": "priceoye",
+    "id": 74,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 28800,
+      "cpu_benchmark": 28316,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 20800,
-      "ram_gb": 32,
-      "storage_gb": 1024,
+      "gpu_benchmark": 16122,
+      "ram_gb": 16,
+      "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "display_size": 15.4,
+      "weight_kg": 2.03,
+      "battery_wh": 59
     },
     "release_year": 2023
   },
@@ -1560,17 +1634,18 @@
     "price_pkr": 352999,
     "source_url": "https://priceoye.pk/laptops/dell/dell-latitude-5440-13th-gen-core-i7-1355u-8gb-512gb-ssd",
     "source": "priceoye",
+    "id": 75,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 14631,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 2904,
       "ram_gb": 16,
       "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 14.2,
+      "weight_kg": 1.29,
+      "battery_wh": 60
     },
     "release_year": 2023
   },
@@ -1581,17 +1656,18 @@
     "price_pkr": 362999,
     "source_url": "https://priceoye.pk/laptops/dell/dell-latitude-5450-14th-gen-core-ultra-7-8gb-512gb-ssd",
     "source": "priceoye",
+    "id": 76,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 14029,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
-      "ram_gb": 16,
-      "storage_gb": 512,
+      "gpu_benchmark": 3675,
+      "ram_gb": 32,
+      "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 13.9,
+      "weight_kg": 1.37,
+      "battery_wh": 50
     },
     "release_year": 2023
   },
@@ -1602,17 +1678,18 @@
     "price_pkr": 362999,
     "source_url": "https://priceoye.pk/laptops/dell/dell-lattitude-5550-14th-gen-core-ultra-7-155u-8gb-512gb-ssd",
     "source": "priceoye",
+    "id": 77,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 13794,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
-      "ram_gb": 16,
-      "storage_gb": 512,
+      "gpu_benchmark": 2282,
+      "ram_gb": 8,
+      "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.2,
+      "weight_kg": 1.66,
+      "battery_wh": 50
     },
     "release_year": 2023
   },
@@ -1623,17 +1700,18 @@
     "price_pkr": 312999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkpad-e14-g6-14th-intel-core-ultra-7-155h-16gb-512gb-ssd",
     "source": "priceoye",
+    "id": 78,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 17358,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 2394,
       "ram_gb": 16,
-      "storage_gb": 512,
+      "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 13.8,
+      "weight_kg": 1.69,
+      "battery_wh": 60
     },
     "release_year": 2023
   },
@@ -1644,17 +1722,18 @@
     "price_pkr": 287999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkpad-e14-g4-13th-gen-intel-core-i7-1355u-8gb-512gb-ssd",
     "source": "priceoye",
+    "id": 79,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 12340,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
-      "ram_gb": 16,
-      "storage_gb": 512,
+      "gpu_benchmark": 2774,
+      "ram_gb": 32,
+      "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 14.2,
+      "weight_kg": 1.35,
+      "battery_wh": 49
     },
     "release_year": 2023
   },
@@ -1665,17 +1744,18 @@
     "price_pkr": 400999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkpad-t14-14th-gen-intel-core-ultra-7-155u-16gb-512gb-ssd",
     "source": "priceoye",
+    "id": 80,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 18000,
+      "cpu_benchmark": 13286,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3900,
-      "ram_gb": 32,
+      "gpu_benchmark": 3062,
+      "ram_gb": 16,
       "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 13.9,
+      "weight_kg": 1.59,
+      "battery_wh": 65
     },
     "release_year": 2023
   },
@@ -1686,17 +1766,18 @@
     "price_pkr": 430999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkpad-t14-14th-gen-intel-core-ultra-7-155u-32gb-512gb-ssd",
     "source": "priceoye",
+    "id": 81,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 18000,
+      "cpu_benchmark": 15044,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3900,
+      "gpu_benchmark": 2929,
       "ram_gb": 32,
-      "storage_gb": 1024,
+      "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 14.3,
+      "weight_kg": 1.53,
+      "battery_wh": 52
     },
     "release_year": 2023
   },
@@ -1707,17 +1788,18 @@
     "price_pkr": 355999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-ideapad-slim-5-ultra-7-155h-16gb-512gb-dos",
     "source": "priceoye",
+    "id": 82,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 12335,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 2984,
       "ram_gb": 16,
       "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
+      "display_size": 14.3,
       "weight_kg": 1.5,
-      "battery_wh": 55
+      "battery_wh": 65
     },
     "release_year": 2023
   },
@@ -1728,17 +1810,18 @@
     "price_pkr": 399999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-loq-15-13th-core-i7-13650hx-24gb-512gb-dos",
     "source": "priceoye",
+    "id": 83,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 11976,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
-      "ram_gb": 16,
+      "gpu_benchmark": 2945,
+      "ram_gb": 8,
       "storage_gb": 512,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.1,
+      "weight_kg": 1.58,
+      "battery_wh": 42
     },
     "release_year": 2023
   },
@@ -1749,17 +1832,18 @@
     "price_pkr": 249999,
     "source_url": "https://priceoye.pk/laptops/dell/dell-latitude-3550-raptor-lake-13th-gen-core-i7-1355u-8gb-512gb-ssd",
     "source": "priceoye",
+    "id": 84,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 16736,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 3621,
       "ram_gb": 16,
-      "storage_gb": 512,
+      "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 14.5,
+      "weight_kg": 1.29,
+      "battery_wh": 44
     },
     "release_year": 2023
   },
@@ -1770,17 +1854,18 @@
     "price_pkr": 426999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-loq-15-ci7-14650hx",
     "source": "priceoye",
+    "id": 85,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 14400,
+      "cpu_benchmark": 10197,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 3250,
-      "ram_gb": 32,
-      "storage_gb": 1024,
+      "gpu_benchmark": 2643,
+      "ram_gb": 8,
+      "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.3,
+      "weight_kg": 1.59,
+      "battery_wh": 52
     },
     "release_year": 2023
   },
@@ -1791,17 +1876,18 @@
     "price_pkr": 329999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-omnibook-x-flip-16-as0023dx-core-ultra-7-256v-16gb-1tb-ssd",
     "source": "priceoye",
+    "id": 86,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 13749,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
+      "gpu_benchmark": 1913,
       "ram_gb": 16,
-      "storage_gb": 512,
+      "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.1,
+      "weight_kg": 1.98,
+      "battery_wh": 41
     },
     "release_year": 2023
   },
@@ -1812,16 +1898,17 @@
     "price_pkr": 452999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-omnibook-ultra-flip-14-fh0030ca-core-ultra-7-256v-16gb-1tb-ssd",
     "source": "priceoye",
+    "id": 87,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 14400,
+      "cpu_benchmark": 9875,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 3250,
-      "ram_gb": 32,
-      "storage_gb": 1024,
+      "gpu_benchmark": 2111,
+      "ram_gb": 8,
+      "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
+      "display_size": 15.4,
+      "weight_kg": 1.98,
       "battery_wh": 45
     },
     "release_year": 2023
@@ -1833,17 +1920,18 @@
     "price_pkr": 659999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkpad-x1-carbon-g13-ultra-7-256v-32gb-512gb-ssd",
     "source": "priceoye",
+    "id": 88,
     "specification": {
       "cpu_model": "Intel Core i7 (13th Gen)",
-      "cpu_benchmark": 20400,
+      "cpu_benchmark": 16128,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 5200,
-      "ram_gb": 32,
-      "storage_gb": 1024,
+      "gpu_benchmark": 3379,
+      "ram_gb": 16,
+      "storage_gb": 512,
       "storage_type": "NVMe SSD",
       "display_size": 13.5,
-      "weight_kg": 1.3,
-      "battery_wh": 60
+      "weight_kg": 1.46,
+      "battery_wh": 63
     },
     "release_year": 2023
   },
@@ -1854,17 +1942,18 @@
     "price_pkr": 245999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-victus-15-fa2013dx-ci5-13420h-8gb-512gb-ssd-rtx-3050-6gb",
     "source": "priceoye",
+    "id": 89,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 9486,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
-      "ram_gb": 8,
+      "gpu_benchmark": 2633,
+      "ram_gb": 16,
       "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 16.0,
+      "weight_kg": 2.07,
+      "battery_wh": 38
     },
     "release_year": 2023
   },
@@ -1875,17 +1964,18 @@
     "price_pkr": 627999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-legion-pro-5-ci9-14900hx-32gb-1tb-ssd-rtx-4070-8gb",
     "source": "priceoye",
+    "id": 90,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 28800,
+      "cpu_benchmark": 20444,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 20800,
-      "ram_gb": 32,
-      "storage_gb": 1024,
+      "gpu_benchmark": 12741,
+      "ram_gb": 16,
+      "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "display_size": 15.7,
+      "weight_kg": 2.41,
+      "battery_wh": 72
     },
     "release_year": 2023
   },
@@ -1896,17 +1986,18 @@
     "price_pkr": 637999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-legion-pro-5-ultra-7-255hx-32gb-1tb-ssd-rtx-5060-8gb",
     "source": "priceoye",
+    "id": 91,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 28800,
+      "cpu_benchmark": 19002,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 20800,
-      "ram_gb": 32,
-      "storage_gb": 1024,
+      "gpu_benchmark": 13378,
+      "ram_gb": 16,
+      "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "display_size": 16.0,
+      "weight_kg": 2.43,
+      "battery_wh": 60
     },
     "release_year": 2023
   },
@@ -1917,17 +2008,18 @@
     "price_pkr": 737999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-legion-pro-5-ultra-9-275hx-32gb-1tb-ssd-rtx-5070-8gb",
     "source": "priceoye",
+    "id": 92,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 28800,
+      "cpu_benchmark": 23052,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 20800,
-      "ram_gb": 32,
-      "storage_gb": 1024,
+      "gpu_benchmark": 16519,
+      "ram_gb": 16,
+      "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "display_size": 15.9,
+      "weight_kg": 2.34,
+      "battery_wh": 72
     },
     "release_year": 2023
   },
@@ -1938,17 +2030,18 @@
     "price_pkr": 992999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-legion-pro-7-ultra-9-275hx-32gb-2tb-ssd-rtx-5070ti-12gb-240hz",
     "source": "priceoye",
+    "id": 93,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 28800,
+      "cpu_benchmark": 28948,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 20800,
-      "ram_gb": 32,
+      "gpu_benchmark": 15954,
+      "ram_gb": 16,
       "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "display_size": 15.2,
+      "weight_kg": 2.35,
+      "battery_wh": 65
     },
     "release_year": 2023
   },
@@ -1959,17 +2052,18 @@
     "price_pkr": 501999,
     "source_url": "https://priceoye.pk/laptops/asus/asus-tuf-gaming-a14-fa-401wu-ryzen-ai-9-hx370-32gb-1tb-ssd-rtx-4050-6gb",
     "source": "priceoye",
+    "id": 94,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 28800,
+      "cpu_benchmark": 24561,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 20800,
-      "ram_gb": 32,
-      "storage_gb": 1024,
+      "gpu_benchmark": 12992,
+      "ram_gb": 16,
+      "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "display_size": 15.1,
+      "weight_kg": 2.15,
+      "battery_wh": 68
     },
     "release_year": 2023
   },
@@ -1980,17 +2074,18 @@
     "price_pkr": 992999,
     "source_url": "https://priceoye.pk/laptops/acer/acer-predator-helios-18-ai-core-ultra-9-275hx-64gb-1tb-ssd-rtx-5080-16gb",
     "source": "priceoye",
+    "id": 95,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 28800,
+      "cpu_benchmark": 27121,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 20800,
+      "gpu_benchmark": 16110,
       "ram_gb": 32,
-      "storage_gb": 1024,
+      "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "display_size": 16.0,
+      "weight_kg": 2.64,
+      "battery_wh": 71
     },
     "release_year": 2023
   },
@@ -2001,17 +2096,18 @@
     "price_pkr": 702999,
     "source_url": "https://priceoye.pk/laptops/acer/acer-predator-helios-16-ai-core-ultra-9-275hx-32gb-1tb-ssd-rtx-5070ti-12gb",
     "source": "priceoye",
+    "id": 96,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 28800,
+      "cpu_benchmark": 22447,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 20800,
-      "ram_gb": 32,
-      "storage_gb": 1024,
+      "gpu_benchmark": 19261,
+      "ram_gb": 16,
+      "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "display_size": 15.9,
+      "weight_kg": 2.23,
+      "battery_wh": 61
     },
     "release_year": 2023
   },
@@ -2022,17 +2118,18 @@
     "price_pkr": 527999,
     "source_url": "https://priceoye.pk/laptops/asus/asus-rog-strix-g16-g615jmr-ci7-14650hx-16gb-1tb-ssd-rtx-5060-8gb",
     "source": "priceoye",
+    "id": 97,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 28800,
+      "cpu_benchmark": 20334,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 20800,
-      "ram_gb": 32,
-      "storage_gb": 1024,
+      "gpu_benchmark": 18448,
+      "ram_gb": 16,
+      "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "display_size": 15.9,
+      "weight_kg": 2.21,
+      "battery_wh": 79
     },
     "release_year": 2023
   },
@@ -2043,17 +2140,18 @@
     "price_pkr": 244999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkpad-e14-g8-u5-225h-8gb-512gb-ssd",
     "source": "priceoye",
+    "id": 98,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 13922,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
+      "gpu_benchmark": 3496,
       "ram_gb": 16,
       "storage_gb": 512,
       "storage_type": "NVMe SSD",
       "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "weight_kg": 1.43,
+      "battery_wh": 45
     },
     "release_year": 2023
   },
@@ -2064,17 +2162,18 @@
     "price_pkr": 348999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkpad-e14-g8-u7-255h-16gb-512gb-ssd",
     "source": "priceoye",
+    "id": 99,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 15000,
+      "cpu_benchmark": 14279,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3000,
-      "ram_gb": 16,
-      "storage_gb": 512,
+      "gpu_benchmark": 2550,
+      "ram_gb": 32,
+      "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 14.3,
+      "weight_kg": 1.36,
+      "battery_wh": 49
     },
     "release_year": 2023
   },
@@ -2085,17 +2184,18 @@
     "price_pkr": 469999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-thinkpad-t14-g6-ultra-7-255h-16gb-512gb-ssd",
     "source": "priceoye",
+    "id": 100,
     "specification": {
       "cpu_model": "Intel Core i5 (12th Gen)",
-      "cpu_benchmark": 18000,
+      "cpu_benchmark": 12342,
       "gpu_model": "Intel Iris Xe",
-      "gpu_benchmark": 3900,
-      "ram_gb": 32,
-      "storage_gb": 1024,
+      "gpu_benchmark": 2932,
+      "ram_gb": 16,
+      "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 14.0,
-      "weight_kg": 1.5,
-      "battery_wh": 55
+      "display_size": 14.2,
+      "weight_kg": 1.62,
+      "battery_wh": 59
     },
     "release_year": 2023
   },
@@ -2106,17 +2206,18 @@
     "price_pkr": 502999,
     "source_url": "https://priceoye.pk/laptops/acer/acer-predator-helios-neo-16-ai-phn16-73-97sp-gaming-notebook-16gb-1tb-ssd",
     "source": "priceoye",
+    "id": 101,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 28800,
+      "cpu_benchmark": 24973,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 20800,
-      "ram_gb": 32,
+      "gpu_benchmark": 13558,
+      "ram_gb": 16,
       "storage_gb": 1024,
       "storage_type": "NVMe SSD",
       "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "weight_kg": 2.62,
+      "battery_wh": 81
     },
     "release_year": 2023
   },
@@ -2127,17 +2228,18 @@
     "price_pkr": 349999,
     "source_url": "https://priceoye.pk/laptops/dell/dell-alienware-aurora-16-core-7-240h-16gb-512gb-ssd-rtx-5050-8gb",
     "source": "priceoye",
+    "id": 102,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 9889,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
-      "ram_gb": 16,
-      "storage_gb": 512,
+      "gpu_benchmark": 2644,
+      "ram_gb": 8,
+      "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.7,
+      "weight_kg": 1.62,
+      "battery_wh": 48
     },
     "release_year": 2023
   },
@@ -2148,17 +2250,18 @@
     "price_pkr": 549999,
     "source_url": "https://priceoye.pk/laptops/asus/asus-tuf-f16-fx608lm-ultra-9-275hx-32gb-1tb-ssd-rtx-5060-8gb",
     "source": "priceoye",
+    "id": 103,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 28800,
+      "cpu_benchmark": 29748,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 20800,
+      "gpu_benchmark": 15650,
       "ram_gb": 32,
-      "storage_gb": 1024,
+      "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "display_size": 15.3,
+      "weight_kg": 2.45,
+      "battery_wh": 76
     },
     "release_year": 2023
   },
@@ -2169,17 +2272,18 @@
     "price_pkr": 645999,
     "source_url": "https://priceoye.pk/laptops/dell/dell-alienware-16x-aurora-ac16251-ultra-9-275hx-16gb-1tb-ssd-rtx-5070-8gb",
     "source": "priceoye",
+    "id": 104,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 14400,
+      "cpu_benchmark": 14759,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 3250,
-      "ram_gb": 32,
-      "storage_gb": 1024,
+      "gpu_benchmark": 2964,
+      "ram_gb": 8,
+      "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.4,
+      "weight_kg": 1.93,
+      "battery_wh": 40
     },
     "release_year": 2023
   },
@@ -2190,17 +2294,18 @@
     "price_pkr": 599999,
     "source_url": "https://priceoye.pk/laptops/lenovo/lenovo-legion-5-ci9-14900hx-32gb-1tb-ssd-rtx-5070-8gb",
     "source": "priceoye",
+    "id": 105,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 28800,
+      "cpu_benchmark": 28537,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 20800,
-      "ram_gb": 32,
+      "gpu_benchmark": 14792,
+      "ram_gb": 16,
       "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "display_size": 15.4,
+      "weight_kg": 2.5,
+      "battery_wh": 82
     },
     "release_year": 2023
   },
@@ -2211,17 +2316,18 @@
     "price_pkr": 399999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-victus-15-fa2787nr-core-i7-13620h-gaming-laptop-16gb-512gb-ssd-rtx-5060-8gb",
     "source": "priceoye",
+    "id": 106,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 13264,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
+      "gpu_benchmark": 3001,
       "ram_gb": 16,
-      "storage_gb": 512,
+      "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.9,
+      "weight_kg": 1.54,
+      "battery_wh": 52
     },
     "release_year": 2023
   },
@@ -2232,17 +2338,18 @@
     "price_pkr": 648999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-omnibook-ultra-flip-14-fh0033dx-ultra-9-288v-32gb-2tb-ssd",
     "source": "priceoye",
+    "id": 107,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 14400,
+      "cpu_benchmark": 10478,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 3250,
-      "ram_gb": 32,
-      "storage_gb": 1024,
+      "gpu_benchmark": 2601,
+      "ram_gb": 8,
+      "storage_gb": 512,
       "storage_type": "SATA SSD",
       "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "weight_kg": 2.06,
+      "battery_wh": 47
     },
     "release_year": 2023
   },
@@ -2253,17 +2360,18 @@
     "price_pkr": 448999,
     "source_url": "https://priceoye.pk/laptops/hp/hp-omen-16-am0073dx-core-ultra-7-255h-rtx-5060-8-gb-16gb-1tb",
     "source": "priceoye",
+    "id": 108,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 28800,
+      "cpu_benchmark": 19566,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 20800,
+      "gpu_benchmark": 18525,
       "ram_gb": 32,
       "storage_gb": 1024,
       "storage_type": "NVMe SSD",
-      "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "display_size": 15.4,
+      "weight_kg": 2.56,
+      "battery_wh": 66
     },
     "release_year": 2023
   },
@@ -2274,17 +2382,18 @@
     "price_pkr": 179999,
     "source_url": "https://priceoye.pk/laptops/acer/acer-extensa-15-ex215-57-57kq-i5-13420h-13th-generation-1-year-warranty",
     "source": "priceoye",
+    "id": 109,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 10677,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
+      "gpu_benchmark": 2449,
       "ram_gb": 8,
       "storage_gb": 256,
       "storage_type": "SATA SSD",
       "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "weight_kg": 1.83,
+      "battery_wh": 37
     },
     "release_year": 2023
   },
@@ -2295,17 +2404,18 @@
     "price_pkr": 203999,
     "source_url": "https://priceoye.pk/laptops/acer/acer-extensa-15-ex215-57-720y-i7-13620h-13th-generation-1-year-warranty",
     "source": "priceoye",
+    "id": 110,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 14605,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
-      "ram_gb": 8,
+      "gpu_benchmark": 2360,
+      "ram_gb": 16,
       "storage_gb": 256,
       "storage_type": "SATA SSD",
       "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "weight_kg": 1.97,
+      "battery_wh": 40
     },
     "release_year": 2023
   },
@@ -2316,17 +2426,18 @@
     "price_pkr": 212999,
     "source_url": "https://priceoye.pk/laptops/acer/acer-travel-mate-p2-15-tmp215-55-g2-540j-ultra-5-1-year-warranty",
     "source": "priceoye",
+    "id": 111,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 13963,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
+      "gpu_benchmark": 2140,
       "ram_gb": 8,
-      "storage_gb": 256,
+      "storage_gb": 512,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.5,
+      "weight_kg": 2.04,
+      "battery_wh": 44
     },
     "release_year": 2023
   },
@@ -2337,17 +2448,18 @@
     "price_pkr": 259999,
     "source_url": "https://priceoye.pk/laptops/acer/acer-travel-mate-p2-15-tmp215-55-g2-73ah-ultra-7-1-year-warranty",
     "source": "priceoye",
+    "id": 112,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 11887,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
-      "ram_gb": 16,
+      "gpu_benchmark": 2707,
+      "ram_gb": 8,
       "storage_gb": 512,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 16.0,
+      "weight_kg": 1.86,
+      "battery_wh": 48
     },
     "release_year": 2023
   },
@@ -2358,17 +2470,18 @@
     "price_pkr": 264999,
     "source_url": "https://priceoye.pk/laptops/acer/acer-aspire-spin-14-asp-14-52mtn-52y0-ultra-5-1-year-warranty",
     "source": "priceoye",
+    "id": 113,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 9183,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
+      "gpu_benchmark": 2959,
       "ram_gb": 16,
-      "storage_gb": 512,
+      "storage_gb": 256,
       "storage_type": "SATA SSD",
       "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "weight_kg": 1.92,
+      "battery_wh": 36
     },
     "release_year": 2023
   },
@@ -2379,17 +2492,18 @@
     "price_pkr": 187999,
     "source_url": "https://priceoye.pk/laptops/acer/acer-aspire-go-15-ag15-72p-531e-intel-core-5-120u",
     "source": "priceoye",
+    "id": 114,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 10445,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
-      "ram_gb": 8,
+      "gpu_benchmark": 1997,
+      "ram_gb": 16,
       "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.7,
+      "weight_kg": 1.89,
+      "battery_wh": 40
     },
     "release_year": 2023
   },
@@ -2400,17 +2514,18 @@
     "price_pkr": 206299,
     "source_url": "https://priceoye.pk/laptops/acer/acer-aspire-go-15-ag15-72p-71ma-intel-core-7-150u-1-year-warranty",
     "source": "priceoye",
+    "id": 115,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 14375,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
+      "gpu_benchmark": 2121,
       "ram_gb": 8,
       "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.9,
+      "weight_kg": 1.59,
+      "battery_wh": 38
     },
     "release_year": 2023
   },
@@ -2421,17 +2536,18 @@
     "price_pkr": 514999,
     "source_url": "https://priceoye.pk/laptops/acer/acer-predator-helios-neo-16s-ai-phn16s-71-79xd-2-year-warranty",
     "source": "priceoye",
+    "id": 116,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 28800,
+      "cpu_benchmark": 27856,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 20800,
-      "ram_gb": 32,
-      "storage_gb": 1024,
+      "gpu_benchmark": 16798,
+      "ram_gb": 16,
+      "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "display_size": 15.7,
+      "weight_kg": 2.45,
+      "battery_wh": 56
     },
     "release_year": 2023
   },
@@ -2442,17 +2558,18 @@
     "price_pkr": 580999,
     "source_url": "https://priceoye.pk/laptops/acer/acer-predator-helios-neo-16s-ai-phn16s-71-956n-1tb-2-years-warranty",
     "source": "priceoye",
+    "id": 117,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 28800,
+      "cpu_benchmark": 20881,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 20800,
+      "gpu_benchmark": 13315,
       "ram_gb": 32,
-      "storage_gb": 1024,
+      "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "display_size": 15.5,
+      "weight_kg": 2.23,
+      "battery_wh": 60
     },
     "release_year": 2023
   },
@@ -2463,17 +2580,18 @@
     "price_pkr": 1049999,
     "source_url": "https://priceoye.pk/laptops/acer/acer-predator-helios-18-ai-ph18-73-96y0-1tb-32gb-ram",
     "source": "priceoye",
+    "id": 118,
     "specification": {
       "cpu_model": "Intel Core i7 (12th Gen)",
-      "cpu_benchmark": 28800,
+      "cpu_benchmark": 26531,
       "gpu_model": "NVIDIA RTX 3060",
-      "gpu_benchmark": 20800,
-      "ram_gb": 32,
-      "storage_gb": 1024,
+      "gpu_benchmark": 13460,
+      "ram_gb": 16,
+      "storage_gb": 512,
       "storage_type": "NVMe SSD",
-      "display_size": 15.6,
-      "weight_kg": 2.3,
-      "battery_wh": 70
+      "display_size": 15.9,
+      "weight_kg": 2.02,
+      "battery_wh": 66
     },
     "release_year": 2023
   },
@@ -2484,16 +2602,17 @@
     "price_pkr": 366999,
     "source_url": "https://priceoye.pk/laptops/dell/dell-pro-14-pc14250-core-ultra-7-255u-16gb-512gb-ssd",
     "source": "priceoye",
+    "id": 119,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 14557,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
-      "ram_gb": 16,
-      "storage_gb": 512,
+      "gpu_benchmark": 2099,
+      "ram_gb": 8,
+      "storage_gb": 256,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
+      "display_size": 16.1,
+      "weight_kg": 1.95,
       "battery_wh": 45
     },
     "release_year": 2023
@@ -2505,17 +2624,18 @@
     "price_pkr": 257999,
     "source_url": "https://priceoye.pk/laptops/dell/dell-pro-16-pc16250-core-ultra-5-225u-8gb-512-gb-ssd",
     "source": "priceoye",
+    "id": 120,
     "specification": {
       "cpu_model": "Intel Core i5 (11th Gen)",
-      "cpu_benchmark": 12000,
+      "cpu_benchmark": 12089,
       "gpu_model": "Intel UHD Graphics",
-      "gpu_benchmark": 2500,
-      "ram_gb": 16,
+      "gpu_benchmark": 2110,
+      "ram_gb": 8,
       "storage_gb": 512,
       "storage_type": "SATA SSD",
-      "display_size": 15.6,
-      "weight_kg": 1.8,
-      "battery_wh": 45
+      "display_size": 15.7,
+      "weight_kg": 2.04,
+      "battery_wh": 47
     },
     "release_year": 2023
   }
