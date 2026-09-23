@@ -35,12 +35,9 @@ function Dashboard() {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem('customerToken');
-    localStorage.removeItem('vendorToken');
-    localStorage.removeItem('adminToken');
-    localStorage.removeItem('userRole');
-    localStorage.removeItem('userEmail');
-    sessionStorage.clear();
+    ['customerToken', 'vendorToken', 'adminToken', 'userRole', 'userEmail'].forEach(
+      (k) => localStorage.removeItem(k)
+    );
     window.location.replace('http://localhost:3004/login');
   };
 

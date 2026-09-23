@@ -7,13 +7,10 @@ function Dashboard() {
   const email = localStorage.getItem('userEmail') || 'Admin';
 
   const handleLogout = () => {
-    localStorage.removeItem('customerToken');
-    localStorage.removeItem('vendorToken');
-    localStorage.removeItem('adminToken');
-    localStorage.removeItem('userRole');
-    localStorage.removeItem('userEmail');
-    sessionStorage.clear();
-    window.location.replace('http://localhost:3004/login');
+    ['customerToken', 'vendorToken', 'adminToken', 'userRole', 'userEmail'].forEach(
+      (k) => localStorage.removeItem(k)
+    );
+    window.location.replace('http://localhost:3004/admin-login');
   };
 
   return (
