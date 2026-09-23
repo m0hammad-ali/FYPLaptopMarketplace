@@ -1,0 +1,43 @@
+==========================================
+ Laptop Marketplace - Integration Tests
+==========================================
+
+-- Backend Health --
+  OK  Port 5000
+  OK  Port 5001
+  OK  Port 5002
+  OK  Port 5003
+  OK  Port 5004
+  OK  Port 5005
+  OK  Port 5006
+
+-- Frontend Health --
+  OK  Port 3000
+  OK  Port 3001
+  OK  Port 3002
+  OK  Port 3003
+  OK  Port 3004
+
+-- Public Catalog --
+  OK  Featured laptops returns data
+  OK  Full catalog requires auth
+
+-- Auth Flow --
+  OK  Register returns token
+  OK  Login returns token
+
+-- Authenticated Catalog --
+  OK  Authenticated catalog returns 200
+
+-- Recommendation Engine --
+  OK  Returns recommendations
+
+-- Notification Service --
+  OK  WhatsApp link generated
+
+-- Input Validation --
+  OK  Invalid email rejected
+
+==========================================
+ Results: 20 passed, 0 failed
+==========================================

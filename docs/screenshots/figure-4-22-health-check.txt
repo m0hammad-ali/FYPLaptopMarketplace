@@ -1,0 +1,41 @@
+==========================================
+ System Health Check
+==========================================
+
+-- Containers --
+NAME                     STATUS                  PORTS
+admin-frontend           Up 5 hours              0.0.0.0:3003->3003/tcp, [::]:3003->3003/tcp
+api-gateway              Up 5 hours (healthy)    0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp
+auth-frontend            Up 5 hours              0.0.0.0:3004->3004/tcp, [::]:3004->3004/tcp
+auth-service             Up 5 hours (healthy)    0.0.0.0:5001->5001/tcp, [::]:5001->5001/tcp
+catalog-service          Up 5 hours (healthy)    0.0.0.0:5002->5002/tcp, [::]:5002->5002/tcp
+customer-frontend        Up 5 hours              0.0.0.0:3001->3001/tcp, [::]:3001->3001/tcp
+home-frontend            Up 10 hours             0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp
+inventory-service        Up 10 hours (healthy)   0.0.0.0:5003->5003/tcp, [::]:5003->5003/tcp
+laptop-db                Up 11 hours (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp
+location-service         Up 10 hours (healthy)   0.0.0.0:5006->5006/tcp, [::]:5006->5006/tcp
+notification-service     Up 10 hours             0.0.0.0:5005->5005/tcp, [::]:5005->5005/tcp
+recommendation-service   Up 10 hours (healthy)   0.0.0.0:5004->5004/tcp, [::]:5004->5004/tcp
+vendor-frontend          Up 5 hours              0.0.0.0:3002->3002/tcp, [::]:3002->3002/tcp
+
+-- Backend Services --
+  Port 5000: ok
+  Port 5001: ok
+  Port 5002: ok
+  Port 5003: ok
+  Port 5004: ok
+  Port 5005: ok
+  Port 5006: ok
+
+-- Frontend Apps --
+  Port 3000: 200
+  Port 3001: 200
+  Port 3002: 200
+  Port 3003: 200
+  Port 3004: 200
+
+-- Database --
+  Laptops: 120
+  Shops: 3
+
+==========================================

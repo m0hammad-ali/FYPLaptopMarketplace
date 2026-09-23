@@ -1,0 +1,25 @@
+# LIST OF TABLES
+
+- Table 3.1: database entities and purposes
+- Table 3.2: container inventory (13 containers)
+- Table 4.1: technology stack by layer
+- Table 4.2: Docker container inventory
+- Table 4.3: Git workflow conventions
+- Table 4.4: data sources for scraping
+- Table 4.5: preprocessing pipeline steps
+- Table 4.6: dynamic weights by usage type
+- Table 4.7: catalog service endpoints
+- Table 4.8: inventory service endpoints
+- Table 4.9: location service endpoints
+- Table 4.10: API gateway routes
+- Table 4.11: security layers
+- Table 4.12: GCP service mapping
+- Table 4.13: Cloud Run configuration
+- Table 4.14: OWASP ZAP findings
+- Table 4.15: data source summary
+- Table 5.1: integration test cases
+- Table 5.2: unit test coverage
+- Table 5.3: k6 load test results
+- Table 5.4: Precision@K results
+- Table 5.5: cosine vs Euclidean comparison
+- Table 5.6: objectives versus achieved results

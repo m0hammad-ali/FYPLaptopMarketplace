@@ -1,20 +1,29 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Toaster } from 'react-hot-toast';
-import { Package, Store, LogOut, ShieldCheck } from 'lucide-react';
+import { Package, Store, LogOut, ShieldCheck, Clock } from 'lucide-react';
 import ProtectedRoute from './components/ProtectedRoute';
 import InventoryTab from './components/InventoryTab';
 import ShopsTab from './components/ShopsTab';
+import client from './api/client';
 
 function Dashboard() {
   const [tab, setTab] = useState('inventory');
+  const [vendorStatus, setVendorStatus] = useState(null);
   const email = localStorage.getItem('userEmail') || 'Vendor';
 
+  useEffect(() => {
+    client
+      .get('/api/inventory/vendor-status')
+      .then((res) => setVendorStatus(res.data))
+      .catch(() => setVendorStatus({ is_verified: false }));
+  }, []);
+
   const handleLogout = () => {
-    ['customerToken', 'vendorToken', 'adminToken', 'userRole', 'userEmail'].forEach(
-      (k) => localStorage.removeItem(k)
-    );
-    window.location.replace('http://localhost:3004/login');
+    ['vendorToken', 'userRole', 'userEmail'].forEach((k) => localStorage.removeItem(k));
+    window.location.href = 'http://localhost:3004/login?redirect=vendor';
   };
+
+  const isVerified = vendorStatus?.is_verified === true;
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -43,10 +52,19 @@ function Dashboard() {
           <p className="mt-1 text-sm text-gray-500">
             Manage your laptop listings and shop locations.
           </p>
-          <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-800">
-            <ShieldCheck className="h-3.5 w-3.5" />
-            Verification: Pending
-          </div>
+
+          {/* Verification badge — dynamic */}
+          {isVerified ? (
+            <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-green-100 px-3 py-1 text-xs font-bold text-green-800">
+              <ShieldCheck className="h-3.5 w-3.5" />
+              Verified Vendor
+            </div>
+          ) : (
+            <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-800">
+              <Clock className="h-3.5 w-3.5" />
+              Verification: Pending (admin will verify)
+            </div>
+          )}
         </div>
 
         <div className="mb-6 flex gap-1 border-b border-gray-200">

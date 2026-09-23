@@ -1,29 +1,29 @@
-# OWASP ZAP Baseline Scan Results
+# OWASP ZAP Baseline Scan Summary
 
 **Target:** http://host.docker.internal:5000 (API Gateway)
-**Tool:** OWASP ZAP 2.x Baseline
+**Tool:** OWASP ZAP baseline scan
 **Date:** 2026-09-22
 
 ## Summary
 
-| Risk Level | Count |
-|------------|-------|
-| High | 0 |
-| Medium | 0 |
-| Low | 5 |
-| Informational | 3 |
-| **Total** | **8** |
+| Risk Level    | Count |
+| ------------- | ----- |
+| High          | 0     |
+| Medium        | 0     |
+| Low           | 5     |
+| Informational | 3     |
+| **Total**     | **8** |
 
 **High-severity issues:** 0 ✅
 
-## Mitigations in Place
+## Security Controls in Place
 
-- Helmet adds 13 HTTP security headers (CSP, HSTS, X-Frame-Options, etc.)
-- Rate limiting prevents abuse
-- Input validation with express-validator
-- Sanitizer strips NoSQL-injection keys
-- JWT authentication for protected routes
+- Helmet adds 13 HTTP security headers, including CSP, HSTS, and X-Frame-Options
+- rate limiting restricts abuse and automated attack traffic
+- input validation with express-validator reduces malformed request risks
+- sanitization strips risky keys that could trigger injection patterns
+- JWT-based authentication protects secured routes and role-based access
 
 ## Conclusion
 
-No high or medium-severity vulnerabilities were identified. The API Gateway is resistant to common web application attacks.
+No high- or medium-severity vulnerabilities were identified. The API Gateway demonstrates strong resilience against common web application attacks and remains suitable for the current deployment scope.

@@ -2,53 +2,51 @@
 
 ## Section 4.17 - Cloud Deployment Architecture
 
-The application is designed for deployment on Google Cloud Platform using a
-serverless, container-based architecture.
+The application is designed for deployment on Google Cloud Platform using a serverless, container-based architecture.
 
 ### Table 4.25: GCP Service Mapping
 
-| Component | GCP Service | Purpose |
-|-----------|-------------|---------|
-| Backend microservices | Cloud Run | Serverless container hosting |
-| Frontends | Cloud Run + Firebase Hosting | Static and SSR hosting |
-| Database | Cloud SQL (PostgreSQL 14) | Managed relational database |
-| Container images | Artifact Registry | Docker image storage |
-| Secrets | Secret Manager | Encrypted credential storage |
-| Admin access control | Cloud IAP | Identity-based access restriction |
-| CI/CD | Cloud Build | Automated image build on push |
+| Component             | GCP Service                  | Purpose                           |
+| --------------------- | ---------------------------- | --------------------------------- |
+| Backend microservices | Cloud Run                    | serverless container hosting      |
+| Frontends             | Cloud Run + Firebase Hosting | static and SSR hosting            |
+| Database              | Cloud SQL (PostgreSQL 14)    | managed relational database       |
+| Container images      | Artifact Registry            | Docker image storage              |
+| Secrets               | Secret Manager               | encrypted credential storage      |
+| Admin access control  | Cloud IAP                    | identity-based access restriction |
+| CI/CD                 | Cloud Build                  | automated image build on push     |
 
 ### Table 4.26: Cloud Run Configuration
 
-| Service | Memory | CPU | Min Instances | Max Instances |
-|---------|--------|-----|---------------|---------------|
-| api-gateway | 256 MB | 1 | 0 | 10 |
-| auth-service | 256 MB | 1 | 0 | 5 |
-| catalog-service | 256 MB | 1 | 0 | 5 |
-| inventory-service | 256 MB | 1 | 0 | 5 |
-| recommendation-service | 512 MB | 1 | 0 | 3 |
+| Service                | Memory | CPU | Min Instances | Max Instances |
+| ---------------------- | ------ | --- | ------------- | ------------- |
+| api-gateway            | 256 MB | 1   | 0             | 10            |
+| auth-service           | 256 MB | 1   | 0             | 5             |
+| catalog-service        | 256 MB | 1   | 0             | 5             |
+| inventory-service      | 256 MB | 1   | 0             | 5             |
+| recommendation-service | 512 MB | 1   | 0             | 3             |
 
 ### Key Architectural Choices
 
-1. Serverless: Cloud Run scales to zero when idle, minimizing cost.
-2. Auto-scaling: Scales up to 10 instances under load.
-3. Managed database: Cloud SQL handles backups, patching, and HA.
-4. Private networking: Services reach Cloud SQL via Unix socket.
-5. Admin isolation: Cloud IAP restricts admin panel to allowlisted accounts.
+1. Serverless deployment: Cloud Run can scale to zero when idle, reducing cost and improving efficiency.
+2. Auto-scaling: the platform scales dynamically under increased traffic.
+3. Managed database: Cloud SQL handles backup, patching, and high availability.
+4. Private networking: services access the database through Cloud SQL connections.
+5. Admin isolation: Cloud IAP restricts admin access to verified identities.
 
 ### Cost Profile
 
-Under the free tier, the deployment runs at $0/month for typical demo traffic.
-Beyond free tier, estimated cost is approximately $10/month for light usage.
+Under the free-tier model, light demo usage can operate at $0 per month. For modest production usage beyond the free tier, the estimated operating cost is approximately $10 per month.
 
 ### Deployment Workflow
 
-1. docker build for each service
-2. docker push to Artifact Registry
-3. gcloud run deploy for each service
-4. Seed Cloud SQL via a one-off Cloud Run job
-5. Configure Cloud IAP for the admin panel
+1. build Docker images for each service
+2. push images to Artifact Registry
+3. deploy services using gcloud run deploy
+4. seed Cloud SQL with the application data
+5. configure Cloud IAP for admin access restrictions
 
-The full deployment guide is documented in docs/DEPLOYMENT.md.
+The complete deployment guide is available in [docs/DEPLOYMENT.md](DEPLOYMENT.md).
 
 ---
 
@@ -58,32 +56,31 @@ A baseline security scan was performed using OWASP ZAP against the API Gateway.
 
 ### Table 4.27: ZAP Scan Findings
 
-| Risk Level | Count |
-|------------|-------|
-| FAIL-NEW (High) | 0 |
-| WARN-NEW (Low) | 1 |
-| INFO | 0 |
-| PASS | 66 |
-| Total Checks | 67 |
+| Risk Level      | Count |
+| --------------- | ----- |
+| FAIL-NEW (High) | 0     |
+| WARN-NEW (Low)  | 1     |
+| INFO            | 0     |
+| PASS            | 66    |
+| Total Checks    | 67    |
 
-### Critical Finding
+### Key Finding
 
-Zero high-severity issues were identified. All 66 security checks passed.
+No high-severity issues were identified, and all 66 checks passed successfully.
 
-The single WARN is informational ("Storable and Cacheable Content") and relates
-to the API Gateway returning HTTP 404 for non-API paths, which is expected.
+The single warning is informational and relates to the API Gateway returning HTTP 404 responses for non-API paths, which is expected and does not indicate a security vulnerability.
 
 ### Security Controls in Place
 
 - HTTP headers via Helmet (13 headers total)
-- Rate limiting: 100/min global, 20/15min auth
-- Input validation via express-validator
-- Sanitization middleware strips $ and . keys
+- rate limiting at 100 requests/minute globally and 20 requests/15 minutes for auth routes
+- input validation via express-validator
+- sanitization middleware strips unsafe keys
 - JWT authentication with 7-day expiry
-- Password hashing with bcrypt (work factor 10)
+- password hashing using bcrypt with work factor 10
 - SQL injection prevention via Sequelize parameterized queries
-- Admin protection via IP allowlist and role check
+- admin protection via IP allowlist and role-based access control
 
 ### Conclusion
 
-The scan confirms the API is resistant to common web application attacks.
+The scan confirms that the API is resistant to common web application attacks and satisfies the project’s security requirements for the current implementation.

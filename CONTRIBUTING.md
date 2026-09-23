@@ -2,91 +2,118 @@
 
 ## Branch Strategy
 
-| Branch | Purpose |
-|--------|---------|
-| main | Production-ready, always deployable |
-| feat/<name> | New feature (e.g., feat/multi-mode-ui) |
-| fix/<name> | Bug fix (e.g., fix/nan-similarity) |
-| docs/<name> | Documentation only |
-| refactor/<name> | Code restructuring |
+| Branch          | Purpose                                 |
+| --------------- | --------------------------------------- |
+| main            | production-ready and deployable branch  |
+| feat/<name>     | new feature work                        |
+| fix/<name>      | bug fixes                               |
+| docs/<name>     | documentation-only changes              |
+| refactor/<name> | structural or internal code refactoring |
 
 ## Commit Convention
 
-We follow Conventional Commits (https://www.conventionalcommits.org).
+This project follows Conventional Commits.
 
 ### Format
 
-    <type>(<scope>): <subject>
+```text
+<type>(<scope>): <subject>
 
-    <body>
+<body>
 
-    <footer>
+<footer>
+```
 
-### Types
+### Commit Types
 
-| Type | When to use |
-|------|-------------|
-| feat | A new feature |
-| fix | A bug fix |
-| docs | Documentation only |
-| style | Formatting, missing semicolons, etc. |
-| refactor | Code change that neither fixes a bug nor adds a feature |
-| test | Adding or fixing tests |
-| chore | Build process or tooling |
-| perf | Performance improvement |
-| ci | CI/CD configuration |
-| revert | Reverting a previous commit |
+| Type     | Use case                                       |
+| -------- | ---------------------------------------------- |
+| feat     | new feature                                    |
+| fix      | bug fix                                        |
+| docs     | documentation-only update                      |
+| style    | formatting and minor presentation changes      |
+| refactor | internal restructuring without behavior change |
+| test     | test additions or fixes                        |
+| chore    | tooling or maintenance work                    |
+| perf     | performance improvements                       |
+| ci       | CI/CD pipeline changes                         |
+| revert   | revert a previous commit                       |
 
-### Scopes
+### Recommended Scopes
 
-Use the affected module: catalog, auth, inventory, ai, customer, vendor,
-admin, home, gateway, db, ui, ci, docs, docker, config.
+Use the affected module name where possible, such as:
+
+- catalog
+- auth
+- inventory
+- ai
+- customer
+- vendor
+- admin
+- home
+- gateway
+- db
+- ui
+- ci
+- docs
+- docker
+- config
 
 ### Examples
 
-Good:
-    feat(catalog): add laptop CRUD with ACID transactions
-    fix(ai): handle NaN values in cosine similarity
-    docs(readme): update setup instructions
-    refactor(auth): extract JWT verification to middleware
-    test(integration): add register/login flow tests
-    ci: add GitHub Actions build job
+Good examples:
 
-Bad:
-    update stuff
-    fixed bug
-    changes
-    asdf
+```text
+feat(catalog): add laptop CRUD with ACID transactions
+fix(ai): handle NaN values in cosine similarity
+docs(readme): update setup instructions
+refactor(auth): extract JWT verification to middleware
+test(integration): add register/login flow tests
+ci: add GitHub Actions build job
+```
 
-### Rules
+Avoid vague messages such as:
 
-- Subject line: max 72 characters, imperative mood ("add" not "added")
-- No period at end of subject
-- Body: wrap at 72 chars, explain WHAT and WHY, not HOW
-- Reference issues: Closes #12
+```text
+update stuff
+fixed bug
+changes
+asdf
+```
+
+### Commit Rules
+
+- keep the subject line under 72 characters
+- use imperative mood, such as "add" not "added"
+- do not end the subject with a period
+- include a short body when needed to explain why the change was required
+- reference issues using "Closes #12" when applicable
 
 ## Pull Request Checklist
 
-- [ ] Branch is up to date with main
-- [ ] All commits follow convention
-- [ ] Tests pass locally
-- [ ] No linter warnings
-- [ ] Docs updated if behavior changed
-- [ ] Screenshots attached for UI changes
+- [ ] branch is up to date with main
+- [ ] commits follow the conventional format
+- [ ] local tests pass
+- [ ] no linter warnings remain
+- [ ] docs are updated if behavior changed
+- [ ] screenshots are attached for UI changes
 
 ## Before Committing
 
-Run these locally:
+Run the following locally:
 
-    pnpm install
-    docker-compose build
-    ./scripts/test-integration.sh
+```bash
+pnpm install
+docker-compose build
+./scripts/test-integration.sh
+```
 
 ## Secrets
 
-NEVER commit:
-- .env files (except .env.example)
-- API keys, passwords, tokens
-- Database dumps with real data
+Never commit the following:
 
-If you accidentally commit a secret, rotate it immediately.
+- .env files unless an example file is intentionally shared
+- API keys, passwords, tokens, and secrets
+- database dumps containing real data
+
+If a secret is accidentally committed, rotate it immediately.
