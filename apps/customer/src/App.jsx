@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Toaster } from 'react-hot-toast';
-import { LogOut, Sparkles, Languages } from 'lucide-react';
+import { LogOut, Sparkles } from 'lucide-react';
 import ProtectedRoute from './components/ProtectedRoute';
 import ModeSelector from './components/ModeSelector';
 import VoiceModeForm from './components/voice-mode/VoiceModeForm';
@@ -8,10 +8,8 @@ import SimpleForm from './components/simple-mode/SimpleForm';
 import ProForm from './components/pro-mode/ProForm';
 import ResultCard from './components/ResultCard';
 import client from './api/client';
-import { useLanguage } from './context/LanguageContext';
 
 function Dashboard() {
-  const { lang, toggleLang } = useLanguage();
   const [mode, setMode] = useState(null);
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -37,8 +35,13 @@ function Dashboard() {
   };
 
   const handleLogout = () => {
-    ['customerToken', 'userRole', 'userEmail'].forEach((k) => localStorage.removeItem(k));
-    window.location.href = 'http://localhost:3004/login?redirect=customer';
+    localStorage.removeItem('customerToken');
+    localStorage.removeItem('vendorToken');
+    localStorage.removeItem('adminToken');
+    localStorage.removeItem('userRole');
+    localStorage.removeItem('userEmail');
+    sessionStorage.clear();
+    window.location.replace('http://localhost:3004/login');
   };
 
   return (
@@ -49,15 +52,7 @@ function Dashboard() {
             <Sparkles className="h-5 w-5" />
             <span>LaptopMarket</span>
           </div>
-          <div className="flex items-center gap-2 sm:gap-3">
-            <button
-              onClick={toggleLang}
-              className="inline-flex items-center gap-1.5 rounded-lg bg-gray-100 px-3 py-2 text-xs font-bold text-gray-700 transition hover:bg-gray-200"
-              title="Toggle language"
-            >
-              <Languages className="h-3.5 w-3.5" />
-              {lang === 'en' ? 'اردو' : 'EN'}
-            </button>
+          <div className="flex items-center gap-3">
             <span className="hidden text-sm text-gray-500 sm:block">
               {localStorage.getItem('userEmail')}
             </span>
@@ -99,7 +94,7 @@ function Dashboard() {
                 onClick={reset}
                 className="mt-3 text-sm font-semibold text-indigo-600 hover:underline"
               >
-                ← Start over
+                Start over
               </button>
             </div>
 

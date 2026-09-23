@@ -12,7 +12,13 @@
     "docker:up": "docker-compose up -d --build",
     "docker:down": "docker-compose down",
     "docker:logs": "docker-compose logs -f",
-    "docker:ps": "docker-compose ps"
+    "docker:ps": "docker-compose ps",
+    "reset": "./scripts/reset.sh",
+    "reset:full": "./scripts/reset.sh --full",
+    "health": "./scripts/health.sh",
+    "ensure-schema": "./scripts/ensure-schema.sh",
+    "test": "./scripts/test-integration.sh",
+    "seed": "docker-compose exec catalog-service node src/seed.js && docker-compose exec location-service node src/seed.js"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",

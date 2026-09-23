@@ -5,6 +5,15 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: true,
-    port: 3003,
+    strictPort: true,
+    watch: {
+      usePolling: false,
+      ignored: ['**/node_modules/**', '**/.git/**', '**/dist/**'],
+    },
+    hmr: { overlay: false },
   },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'axios', 'react-hot-toast', 'lucide-react', 'clsx', 'tailwind-merge'],
+  },
+  build: { target: 'esnext', sourcemap: false, minify: 'esbuild' },
 });

@@ -35,7 +35,7 @@ async function start() {
   try {
     await sequelize.authenticate();
     console.log('Inventory DB connected');
-    await sequelize.sync({ alter: true });
+    await sequelize.sync();
     console.log('Inventory schema synced');
 
     app.listen(port, () => {

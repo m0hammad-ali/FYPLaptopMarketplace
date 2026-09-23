@@ -10,13 +10,17 @@ function Dashboard() {
   const email = localStorage.getItem('userEmail') || 'Vendor';
 
   const handleLogout = () => {
-    ['vendorToken', 'userRole', 'userEmail'].forEach((k) => localStorage.removeItem(k));
-    window.location.href = 'http://localhost:3004/login?redirect=vendor';
+    localStorage.removeItem('customerToken');
+    localStorage.removeItem('vendorToken');
+    localStorage.removeItem('adminToken');
+    localStorage.removeItem('userRole');
+    localStorage.removeItem('userEmail');
+    sessionStorage.clear();
+    window.location.replace('http://localhost:3004/login');
   };
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
       <header className="sticky top-0 z-40 border-b border-gray-200 bg-white">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
           <div className="flex items-center gap-2 font-extrabold text-indigo-600">
@@ -36,7 +40,6 @@ function Dashboard() {
         </div>
       </header>
 
-      {/* Main */}
       <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
         <div className="mb-6">
           <h1 className="text-3xl font-extrabold text-gray-900">Vendor Dashboard</h1>
@@ -49,7 +52,6 @@ function Dashboard() {
           </div>
         </div>
 
-        {/* Tabs */}
         <div className="mb-6 flex gap-1 border-b border-gray-200">
           <button
             onClick={() => setTab('inventory')}
@@ -75,7 +77,6 @@ function Dashboard() {
           </button>
         </div>
 
-        {/* Tab content */}
         {tab === 'inventory' ? <InventoryTab /> : <ShopsTab />}
       </main>
     </div>

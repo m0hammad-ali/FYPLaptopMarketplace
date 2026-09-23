@@ -7,13 +7,17 @@ function Dashboard() {
   const email = localStorage.getItem('userEmail') || 'Admin';
 
   const handleLogout = () => {
-    ['adminToken', 'userRole', 'userEmail'].forEach((k) => localStorage.removeItem(k));
-    window.location.href = 'http://localhost:3004/login?redirect=admin';
+    localStorage.removeItem('customerToken');
+    localStorage.removeItem('vendorToken');
+    localStorage.removeItem('adminToken');
+    localStorage.removeItem('userRole');
+    localStorage.removeItem('userEmail');
+    sessionStorage.clear();
+    window.location.replace('http://localhost:3004/login');
   };
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Dark header */}
       <header className="bg-gray-900 text-white">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
           <div className="flex items-center gap-2 font-extrabold">
@@ -33,7 +37,6 @@ function Dashboard() {
         </div>
       </header>
 
-      {/* Main */}
       <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
         <div className="mb-8">
           <h1 className="text-3xl font-extrabold text-gray-900">Admin Dashboard</h1>

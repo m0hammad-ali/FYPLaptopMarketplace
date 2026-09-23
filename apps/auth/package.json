@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "vite --host 0.0.0.0",
+    "dev": "vite --host 0.0.0.0 --port 3004",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -14,7 +14,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.1",
-    "react-router-dom": "^6.21.1",
     "tailwind-merge": "^2.2.0"
   },
   "devDependencies": {

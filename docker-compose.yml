@@ -1,8 +1,8 @@
-
 services:
   db:
     image: postgres:14-alpine
     container_name: laptop-db
+    restart: unless-stopped
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -11,34 +11,13 @@ services:
       - "5432:5432"
     volumes:
       - db_data:/var/lib/postgresql/data
+      - ./database/init:/docker-entrypoint-initdb.d:ro
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
-      interval: 10s
+      test: ["CMD-SHELL", "pg_isready -U postgres -d laptop_marketplace"]
+      interval: 5s
       timeout: 5s
-      retries: 5
-    networks:
-      - marketplace
-
-  api-gateway:
-    build:
-      context: .
-      dockerfile: services/api-gateway/Dockerfile
-    container_name: api-gateway
-    ports:
-      - "5000:5000"
-    environment:
-      - PORT=5000
-      - JWT_SECRET=supersecretkey
-      - CATALOG_SERVICE_URL=http://catalog-service:5002
-      - RECOMMENDATION_SERVICE_URL=http://recommendation-service:5004
-      - INVENTORY_SERVICE_URL=http://inventory-service:5003
-      - AUTH_SERVICE_URL=http://auth-service:5001
-    depends_on:
-      - db
-    volumes:
-      - ./services/api-gateway:/app
-      - /app/node_modules
-    command: npm run dev
+      retries: 20
+      start_period: 30s
     networks:
       - marketplace
 
@@ -47,19 +26,29 @@ services:
       context: .
       dockerfile: services/auth-service/Dockerfile
     container_name: auth-service
+    restart: unless-stopped
     ports:
       - "5001:5001"
     environment:
       - PORT=5001
+      - NODE_ENV=development
       - DATABASE_URL=postgresql://postgres:postgres@db:5432/laptop_marketplace
       - JWT_SECRET=supersecretkey
+      - JWT_EXPIRES_IN=7d
+      - AUTH_RATE_LIMIT=500
     depends_on:
       db:
         condition: service_healthy
     volumes:
       - ./services/auth-service:/app
       - /app/node_modules
-    command: npm run dev
+    command: npm start
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:5001/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 40s
     networks:
       - marketplace
 
@@ -68,18 +57,28 @@ services:
       context: .
       dockerfile: services/catalog-service/Dockerfile
     container_name: catalog-service
+    restart: unless-stopped
     ports:
       - "5002:5002"
     environment:
       - PORT=5002
+      - NODE_ENV=development
       - DATABASE_URL=postgresql://postgres:postgres@db:5432/laptop_marketplace
     depends_on:
       db:
         condition: service_healthy
+      auth-service:
+        condition: service_started
     volumes:
       - ./services/catalog-service:/app
-      - /app/node_modules
+      - catalog_node_modules:/app/node_modules
     command: npm run dev
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:5002/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 40s
     networks:
       - marketplace
 
@@ -88,17 +87,73 @@ services:
       context: .
       dockerfile: services/inventory-service/Dockerfile
     container_name: inventory-service
+    restart: unless-stopped
     ports:
       - "5003:5003"
     environment:
       - PORT=5003
+      - NODE_ENV=development
       - DATABASE_URL=postgresql://postgres:postgres@db:5432/laptop_marketplace
     depends_on:
       db:
         condition: service_healthy
     volumes:
       - ./services/inventory-service:/app
-      - /app/node_modules
+      - inventory_node_modules:/app/node_modules
+    command: npm run dev
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:5003/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 40s
+    networks:
+      - marketplace
+
+  location-service:
+    build:
+      context: .
+      dockerfile: services/location-service/Dockerfile
+    container_name: location-service
+    restart: unless-stopped
+    ports:
+      - "5006:5006"
+    environment:
+      - PORT=5006
+      - NODE_ENV=development
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/laptop_marketplace
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./services/location-service:/app
+      - location_node_modules:/app/node_modules
+    command: npm run dev
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:5006/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 40s
+    networks:
+      - marketplace
+
+  notification-service:
+    build:
+      context: .
+      dockerfile: services/notification-service/Dockerfile
+    container_name: notification-service
+    restart: unless-stopped
+    ports:
+      - "5005:5005"
+    environment:
+      - PORT=5005
+      - NODE_ENV=development
+    depends_on:
+      - db
+    volumes:
+      - ./services/notification-service:/app
+      - notification_node_modules:/app/node_modules
     command: npm run dev
     networks:
       - marketplace
@@ -108,53 +163,61 @@ services:
       context: .
       dockerfile: services/recommendation-service/Dockerfile
     container_name: recommendation-service
+    restart: unless-stopped
     ports:
       - "5004:5004"
     environment:
       - CATALOG_SERVICE_URL=http://catalog-service:5002
     depends_on:
-      - catalog-service
+      catalog-service:
+        condition: service_healthy
     volumes:
       - ./services/recommendation-service:/app
     command: uvicorn main:app --host 0.0.0.0 --port 5004
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:5004/health')\" || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
     networks:
       - marketplace
 
-  notification-service:
+  api-gateway:
     build:
       context: .
-      dockerfile: services/notification-service/Dockerfile
-    container_name: notification-service
+      dockerfile: services/api-gateway/Dockerfile
+    container_name: api-gateway
+    restart: unless-stopped
     ports:
-      - "5005:5005"
+      - "5000:5000"
     environment:
-      - PORT=5005
+      - PORT=5000
+      - NODE_ENV=development
+      - JWT_SECRET=supersecretkey
+      - AUTH_RATE_LIMIT=500
+      - ADMIN_ALLOWED_IPS=127.0.0.1,::1,::ffff:127.0.0.1
+      - AUTH_SERVICE_URL=http://auth-service:5001
+      - CATALOG_SERVICE_URL=http://catalog-service:5002
+      - INVENTORY_SERVICE_URL=http://inventory-service:5003
+      - RECOMMENDATION_SERVICE_URL=http://recommendation-service:5004
+      - NOTIFICATION_SERVICE_URL=http://notification-service:5005
+      - LOCATION_SERVICE_URL=http://location-service:5006
     depends_on:
-      - db
-    volumes:
-      - ./services/notification-service:/app
-      - /app/node_modules
-    command: npm run dev
-    networks:
-      - marketplace
-
-  location-service:
-    build:
-      context: .
-      dockerfile: services/location-service/Dockerfile
-    container_name: location-service
-    ports:
-      - "5006:5006"
-    environment:
-      - PORT=5006
-      - DATABASE_URL=postgresql://postgres:postgres@db:5432/laptop_marketplace
-    depends_on:
-      db:
+      auth-service:
+        condition: service_healthy
+      catalog-service:
         condition: service_healthy
     volumes:
-      - ./services/location-service:/app
-      - /app/node_modules
+      - ./services/api-gateway:/app
+      - api_gateway_node_modules:/app/node_modules
     command: npm run dev
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:5000/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
     networks:
       - marketplace
 
@@ -163,6 +226,7 @@ services:
       context: .
       dockerfile: apps/home/Dockerfile
     container_name: home-frontend
+    restart: unless-stopped
     ports:
       - "3000:3000"
     environment:
@@ -171,7 +235,7 @@ services:
       - api-gateway
     volumes:
       - ./apps/home:/app
-      - /app/node_modules
+      - home_node_modules:/app/node_modules
     command: npm run dev
     networks:
       - marketplace
@@ -181,6 +245,7 @@ services:
       context: .
       dockerfile: apps/customer/Dockerfile
     container_name: customer-frontend
+    restart: unless-stopped
     ports:
       - "3001:3001"
     environment:
@@ -189,7 +254,7 @@ services:
       - api-gateway
     volumes:
       - ./apps/customer:/app
-      - /app/node_modules
+      - customer_node_modules:/app/node_modules
     command: npm run dev
     networks:
       - marketplace
@@ -199,6 +264,7 @@ services:
       context: .
       dockerfile: apps/vendor/Dockerfile
     container_name: vendor-frontend
+    restart: unless-stopped
     ports:
       - "3002:3002"
     environment:
@@ -207,7 +273,7 @@ services:
       - api-gateway
     volumes:
       - ./apps/vendor:/app
-      - /app/node_modules
+      - vendor_node_modules:/app/node_modules
     command: npm run dev
     networks:
       - marketplace
@@ -217,6 +283,7 @@ services:
       context: .
       dockerfile: apps/admin/Dockerfile
     container_name: admin-frontend
+    restart: unless-stopped
     ports:
       - "3003:3003"
     environment:
@@ -225,7 +292,7 @@ services:
       - api-gateway
     volumes:
       - ./apps/admin:/app
-      - /app/node_modules
+      - admin_node_modules:/app/node_modules
     command: npm run dev
     networks:
       - marketplace
@@ -243,13 +310,23 @@ services:
       - api-gateway
     volumes:
       - ./apps/auth:/app
-      - /app/node_modules
-    command: npm run dev
+      - auth_node_modules:/app/node_modules
+    command: sh -c "npm install --include=dev --no-audit --no-fund && npm run dev"
     networks:
       - marketplace
 
 volumes:
   db_data:
+  auth_node_modules:
+  catalog_node_modules:
+  inventory_node_modules:
+  location_node_modules:
+  notification_node_modules:
+  api_gateway_node_modules:
+  home_node_modules:
+  customer_node_modules:
+  vendor_node_modules:
+  admin_node_modules:
 
 networks:
   marketplace:

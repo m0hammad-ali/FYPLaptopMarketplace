@@ -45,7 +45,7 @@ async function start() {
   try {
     await sequelize.authenticate();
     console.log('Auth DB connected');
-    await sequelize.sync({ alter: true });
+    await sequelize.sync();
     console.log('Auth schema synced');
 
     app.listen(port, () => {

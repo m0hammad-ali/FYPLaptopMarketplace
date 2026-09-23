@@ -1,7 +1,7 @@
 FROM node:18-alpine
 WORKDIR /app
 COPY ./apps/admin/package*.json ./
-RUN npm install
+RUN npm install --include=dev --no-audit --no-fund
 COPY ./apps/admin .
-EXPOSE 3003
+EXPOSE 3001
 CMD ["npm", "run", "dev"]
