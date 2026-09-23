@@ -1,0 +1,71 @@
+\chapter{INTRODUCTION}
+
+\section{Background of Study}
+The rapid evolution of laptop hardware technology has created a significant
+knowledge gap between consumers and vendors in local IT markets. Modern laptops
+feature complex specifications including multi-core processors, various RAM types
+(DDR4, DDR5), thermal design power (TDP), GPU architectures, and storage
+technologies (NVMe, SSD, HDD). This complexity, combined with the absence of
+standardized, objective comparison tools, leads to suboptimal purchasing decisions
+and consumer confusion.
+
+In local markets such as Gulhaji Plaza, Peshawar, buyers often rely on vendor
+advice, which may be biased or incomplete, resulting in information asymmetry
+-- a concept introduced by Akerlof \cite{akerlof1970} that describes markets
+where sellers have more information than buyers, leading to market inefficiency.
+
+This project addresses this information asymmetry by developing an AI-powered
+laptop recommendation and marketplace web application tailored for Gulhaji
+Plaza. The system utilizes a content-based filtering recommendation engine that
+analyzes hardware benchmarks and user preferences to provide objective,
+personalized purchasing advice.
+
+\section{Problem Statement}
+The consumer experience in local hardware marketplaces is undermined by a dual
+challenge:
+\begin{itemize}
+  \item \textbf{Consumer Confusion:} The complexity of modern hardware
+    specifications leads to subjective, suboptimal purchasing decisions.
+  \item \textbf{Market Distrust:} A lack of integrated, real-time data results
+    in opaque pricing and non-standardized stock availability.
+\end{itemize}
+
+\section{Objectives}
+\begin{enumerate}
+  \item To design and implement a Content-Based Filtering (CBF) algorithm using
+    Vector Space Modelling and Cosine Similarity, targeting Precision@K $\geq$ 0.85.
+  \item To architect and deploy a decoupled Tri-Stack Microservices system
+    orchestrated via Docker.
+  \item To enforce strict data integrity through a 3rd Normal Form (3NF)
+    PostgreSQL database schema with ACID properties.
+  \item To execute a comprehensive local data acquisition strategy by securing
+    at least 100 unique laptop models.
+  \item To execute a comparative empirical analysis between Cosine Similarity
+    and Euclidean Distance.
+\end{enumerate}
+
+\section{Scope of Project}
+The project encompasses a web application with the following components:
+\begin{itemize}
+  \item A public landing page (Next.js).
+  \item A customer portal with three UI modes (Easy, Simple, Pro).
+  \item A vendor dashboard for inventory management.
+  \item An admin panel for platform governance.
+  \item A microservices backend (7 services).
+  \item Integration with WhatsApp Business API and Google Maps.
+  \item Deployment on Google Cloud Platform.
+\end{itemize}
+
+\section{Methodology Overview}
+The development follows an Agile/Scrum process model with five phases:
+Formalization, Data Foundation, Core Development, Deployment \& Data Acquisition,
+and Final Evaluation.
+
+\section{Report Organization}
+\begin{itemize}
+  \item \textbf{Chapter 2} -- Literature Review
+  \item \textbf{Chapter 3} -- System Analysis and Design
+  \item \textbf{Chapter 4} -- Implementation
+  \item \textbf{Chapter 5} -- Testing and Results
+  \item \textbf{Chapter 6} -- Conclusion and Future Work
+\end{itemize}

@@ -1,0 +1,83 @@
+\documentclass[12pt,a4paper,oneside]{report}
+
+\input{preamble}
+
+\begin{document}
+
+% Front matter
+\pagenumbering{roman}
+\input{titlepage}
+
+\chapter*{Dedication}
+\addcontentsline{toc}{chapter}{Dedication}
+In the name of Allah, the Most Gracious and the Most Merciful. I dedicate this
+intellectual effort to Almighty Allah for His divine guidance, and to my beloved
+parents for their endless prayers and sacrifices. To my mentors at ICS/IT for
+transforming my curiosity into competence, and to the local tech community of
+Peshawar for whom this work was envisioned.
+
+\chapter*{Acknowledgement}
+\addcontentsline{toc}{chapter}{Acknowledgement}
+All praises are for Almighty Allah, the Most Compassionate and the Most Merciful,
+Who bestowed upon us the strength, health, and ability to complete this research
+work. I would like to express my deepest gratitude to my supervisor, Mr. Asif Khan,
+for his invaluable guidance and technical insights. I am also thankful to the FYP
+Coordinator, Mr. Gulzar Ahmed, and to Dr. Arshad Khan, Director of ICS/IT, for
+providing a conducive environment for learning. Lastly, I am forever indebted to
+my beloved parents and family for their prayers, emotional support, and patience.
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+The local hardware market in Gulhaji Plaza, Peshawar, suffers from significant
+information asymmetry, where buyers face complex technical specifications and
+opaque pricing, while vendors lack digital tools for transparent inventory
+management. This capstone project presents an AI-powered laptop recommendation
+and marketplace web application that addresses these challenges through a modern,
+scalable microservices architecture.
+
+The system employs a Content-Based Filtering recommendation engine using weighted
+Cosine Similarity with feature vectorization, achieving a Precision@3 of 0.933 on
+a validation set, exceeding the 0.85 target. The platform is built on a Tri-Stack
+Microservices Architecture consisting of a React Progressive Web App (PWA)
+frontend, a Node.js/Express API Gateway with JWT authentication and ACID-compliant
+transactions, and a Python/FastAPI AI compute service. The system is fully
+containerized using Docker and is designed for serverless deployment on Google
+Cloud Platform (GCP) Cloud Run.
+
+Empirical evaluation through load testing with k6 confirms a p95 latency of
+28.77 ms at 100 concurrent users, with zero failures. An OWASP ZAP security scan
+identified zero high-severity vulnerabilities. This research-grade thesis
+documents the complete engineering process, culminating in a production-ready
+solution that reduces search costs and builds trust in the local IT market.
+
+\vspace{1cm}
+\noindent\textbf{Keywords:} Content-Based Filtering, Cosine Similarity,
+Microservices, Recommendation System, Docker, Google Cloud Platform, ACID
+Transactions, Progressive Web App, Information Asymmetry, Precision@K.
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+% Main matter
+\clearpage
+\pagenumbering{arabic}
+
+\input{chapters/chapter1}
+\input{chapters/chapter2}
+\input{chapters/chapter3}
+\input{chapters/chapter4}
+\input{chapters/chapter5}
+\input{chapters/chapter6}
+
+% References
+\bibliographystyle{apalike}
+\bibliography{references}
+
+% Appendices
+\appendix
+\chapter{Source Code Listings}
+\chapter{User Manual}
+\chapter{Installation Guide}
+
+\end{document}

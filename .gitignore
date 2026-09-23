@@ -82,3 +82,16 @@ results/k6-*.json
 *.bak
 *.backup
 **/package-lock.json
+
+# NPM artifacts (we use pnpm)
+**/package-lock.json
+
+# Python virtual environments
+scripts/scraper/venv/
+
+# Backup files
+*.bak
+*.backup
+
+# Installer binaries
+*.exe

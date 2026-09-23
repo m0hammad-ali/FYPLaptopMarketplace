@@ -1,0 +1,48 @@
+\chapter{CONCLUSION AND FUTURE WORK}
+
+\section{Summary of Work}
+This project delivered an AI-powered laptop recommendation and marketplace web
+application for Gulhaji Plaza, Peshawar. The system combines content-based
+filtering with real-time vendor pricing, addressing information asymmetry in
+the local hardware market.
+
+Key achievements:
+\begin{itemize}
+  \item Precision@3 of 0.933 -- exceeds 0.85 target by 8 points.
+  \item Cosine outperforms Euclidean by 6.6 points on Precision@3.
+  \item p95 latency of 28.77 ms at 100 concurrent users (35$\times$ under budget).
+  \item Zero high-severity security vulnerabilities (OWASP ZAP).
+  \item 120 real laptops scraped from priceoye.pk with PKR prices.
+\end{itemize}
+
+\section{Limitations}
+\begin{enumerate}
+  \item Validation set size: 5 queries only.
+  \item Synthetic enrichment: laptops within a category share base specs.
+  \item Catalog scale: 120 laptops for prototype; production needs 500+.
+  \item Vendor onboarding: validated with demo accounts only.
+  \item Twilio integration: tested in simulation mode.
+  \item Reservation lock system: deferred to v1.1.
+\end{enumerate}
+
+\section{Future Improvements}
+Short-term (v1.1):
+\begin{itemize}
+  \item Reservation lock system with 24-hour hold
+  \item Live Twilio integration for real WhatsApp messages
+  \item Automated data ingestion via scheduled scraping
+\end{itemize}
+
+Medium-term (v1.2):
+\begin{itemize}
+  \item Hybrid recommendations combining CBF with collaborative filtering
+  \item React Native mobile app
+  \item ML-based price prediction
+\end{itemize}
+
+Long-term (v2.0):
+\begin{itemize}
+  \item Multi-city expansion across Pakistan
+  \item Payment integration (Stripe, JazzCash)
+  \item Blockchain-based immutable price history
+\end{itemize}

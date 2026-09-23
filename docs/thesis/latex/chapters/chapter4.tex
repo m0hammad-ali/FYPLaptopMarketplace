@@ -1,0 +1,146 @@
+\chapter{IMPLEMENTATION}
+
+\section{Development Environment}
+The project is developed as a monorepo using pnpm workspaces and Turborepo.
+Development is on Windows 11 with WSL2 and Docker Desktop. VS Code is the
+primary IDE. Git with Conventional Commits (enforced via Husky + Commitlint)
+is used for version control.
+
+\section{Tools and Technologies}
+Table~\ref{tab:stack} summarizes the technology stack.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Technology Stack}
+  \label{tab:stack}
+  \begin{tabular}{@{}ll@{}}
+    \toprule
+    \textbf{Layer} & \textbf{Technology} \\
+    \midrule
+    Public Frontend       & Next.js 13, Tailwind CSS 3.4, Lucide \\
+    Authenticated Frontends & React 18, Vite 5, Tailwind CSS 3.4 \\
+    Backend Runtime       & Node.js 18 \\
+    Backend Framework     & Express 4.18 \\
+    AI Framework          & FastAPI 0.104, Python 3.10 \\
+    AI Libraries          & Pandas, NumPy, scikit-learn \\
+    Database              & PostgreSQL 14 \\
+    ORM                   & Sequelize 6 \\
+    Auth                  & JWT + bcrypt \\
+    Containerization      & Docker, Docker Compose \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Docker Setup}
+All 13 containers run via \texttt{docker-compose.yml} on a custom bridge
+network.
+
+\section{Database Implementation}
+Sequelize models are defined in catalog-service, auth-service, inventory-service,
+and location-service. Transactions are used for multi-table operations.
+
+\begin{lstlisting}[language=JavaScript, caption={Transaction example for laptop creation}, label={lst:transaction}]
+const transaction = await sequelize.transaction();
+try {
+  const laptop = await Laptop.create({ brand, model, ... }, { transaction });
+  await Specification.create({ laptop_id: laptop.id, ... }, { transaction });
+  await transaction.commit();
+} catch (error) {
+  await transaction.rollback();
+}
+\end{lstlisting}
+
+\section{Data Acquisition}
+A Python scraper targets priceoye.pk, collecting 120 real laptops with PKR
+prices.
+
+\section{AI Recommendation Engine}
+The engine uses weighted cosine similarity with dynamic feature weights.
+
+\begin{lstlisting}[language=Python, caption={Weighted cosine similarity}, label={lst:cosine}]
+def weighted_cosine_similarity(user_vector, laptop_vectors, weights):
+    weighted_user = user_vector * weights
+    weighted_laptops = laptop_vectors * weights
+    dot = np.dot(weighted_laptops, weighted_user)
+    norm_user = np.linalg.norm(weighted_user)
+    norm_laptops = np.linalg.norm(weighted_laptops, axis=1)
+    denom = norm_user * norm_laptops
+    denom[denom == 0] = 1e-10
+    return dot / denom
+\end{lstlisting}
+
+\section{API Gateway}
+The API Gateway is the single public entry point with Helmet, CORS, rate
+limiting, JWT verification, and admin IP restriction.
+
+\section{Frontend Implementation}
+Figure~\ref{fig:home-hero} shows the redesigned home page hero section.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figure-4-01-home-hero.png}
+  \caption{Home Page -- Hero Section}
+  \label{fig:home-hero}
+\end{figure}
+
+Figure~\ref{fig:auth-login} shows the redesigned authentication login page.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.7\textwidth]{figure-4-06-auth-login.png}
+  \caption{Authentication App -- Login Screen}
+  \label{fig:auth-login}
+\end{figure}
+
+Figure~\ref{fig:customer-results} shows recommendation results.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figure-4-13-customer-results.png}
+  \caption{Customer App -- Recommendation Results with WhatsApp Contact}
+  \label{fig:customer-results}
+\end{figure}
+
+Figure~\ref{fig:vendor-inv} shows the vendor inventory dashboard.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figure-4-14-vendor-inventory.png}
+  \caption{Vendor App -- Inventory Tab}
+  \label{fig:vendor-inv}
+\end{figure}
+
+Figure~\ref{fig:admin} shows the admin dashboard.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figure-4-18-admin-dashboard.png}
+  \caption{Admin Panel -- Dashboard with Stat Cards}
+  \label{fig:admin}
+\end{figure}
+
+\section{Security Hardening}
+Table~\ref{tab:security} lists the security layers.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Security Layers}
+  \label{tab:security}
+  \begin{tabular}{@{}ll@{}}
+    \toprule
+    \textbf{Layer} & \textbf{Implementation} \\
+    \midrule
+    HTTP headers     & Helmet on all Node services \\
+    Authentication   & JWT (7-day expiry) \\
+    Password storage & bcrypt (work factor 10) \\
+    Rate limiting    & 100/min global, 20/15min auth \\
+    Input validation & express-validator \\
+    Sanitization     & Strips \$ and . keys \\
+    SQL safety       & Sequelize parameterized queries \\
+    Admin protection & IP allowlist + role check \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{CI/CD Pipeline}
+GitHub Actions workflow builds all Docker images on every push to \texttt{main}.

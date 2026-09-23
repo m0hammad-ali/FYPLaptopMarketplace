@@ -1,0 +1,82 @@
+\chapter{SYSTEM ANALYSIS AND DESIGN}
+
+\section{Existing System}
+The current laptop market in Gulhaji Plaza operates entirely offline. Buyers
+visit multiple shops physically, compare prices from memory, and rely on vendor
+recommendations.
+
+\section{Proposed System}
+The proposed system is an AI-powered laptop recommendation and marketplace
+platform that provides personalized recommendations, transparent PKR prices,
+verified vendor badges, and direct WhatsApp contact.
+
+\section{System Architecture}
+The system follows a Tri-Stack Microservices Architecture as illustrated in
+Figure~\ref{fig:architecture}.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{figure-3-01-architecture.png}
+  \caption{System Architecture Diagram of the AI-Powered Laptop Recommendation
+    and Marketplace}
+  \label{fig:architecture}
+\end{figure}
+
+The architecture comprises 5 frontend microfrontends, 7 backend microservices,
+and a PostgreSQL 14 database.
+
+\section{Use Case Diagram}
+Figure~\ref{fig:usecase} presents the use case diagram showing the three primary
+actors: Customer, Vendor, and Admin.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figure-3-02-usecase.png}
+  \caption{Use Case Diagram}
+  \label{fig:usecase}
+\end{figure}
+
+\section{ER Diagram}
+Figure~\ref{fig:er} shows the entity-relationship diagram with 9 entities in
+3NF.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{figure-3-03-er.png}
+  \caption{Entity Relationship Diagram (ERD)}
+  \label{fig:er}
+\end{figure}
+
+\section{Data Flow Diagram}
+Figure~\ref{fig:dfd} presents the Level 0 context diagram.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figure-3-04-dfd.png}
+  \caption{Data Flow Diagram (Level 0)}
+  \label{fig:dfd}
+\end{figure}
+
+\section{Database Design}
+Table~\ref{tab:entities} presents the database entities.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Database Entities and Purposes}
+  \label{tab:entities}
+  \begin{tabular}{@{}lp{9cm}@{}}
+    \toprule
+    \textbf{Table} & \textbf{Purpose} \\
+    \midrule
+    users          & Authentication for all roles \\
+    vendors        & Vendor profile linked to a user \\
+    shops          & Physical shop locations \\
+    laptops        & Static laptop model data \\
+    specifications & Hardware specs (1:1 with laptop) \\
+    inventory      & Vendor offerings (price, stock) \\
+    price\_history & Audit log of price changes \\
+    reviews        & User reviews for laptops \\
+    notifications  & Message log for users \\
+    \bottomrule
+  \end{tabular}
+\end{table}
