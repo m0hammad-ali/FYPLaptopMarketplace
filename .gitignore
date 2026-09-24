@@ -95,3 +95,6 @@ scripts/scraper/venv/
 
 # Installer binaries
 *.exe
+
+# PWA dev artifacts
+apps/customer/dev-dist/
