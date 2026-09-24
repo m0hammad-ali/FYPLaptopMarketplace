@@ -1,14 +1,14 @@
 NAME                     IMAGE                                       COMMAND                  SERVICE                  CREATED        STATUS                  PORTS
-admin-frontend           laptop-marketplace-admin                    "docker-entrypoint.s…"   admin                    5 hours ago    Up 5 hours              0.0.0.0:3003->3003/tcp, [::]:3003->3003/tcp
-api-gateway              laptop-marketplace-api-gateway              "docker-entrypoint.s…"   api-gateway              5 hours ago    Up 5 hours (healthy)    0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp
-auth-frontend            laptop-marketplace-auth                     "docker-entrypoint.s…"   auth                     5 hours ago    Up 5 hours              0.0.0.0:3004->3004/tcp, [::]:3004->3004/tcp
-auth-service             laptop-marketplace-auth-service             "docker-entrypoint.s…"   auth-service             5 hours ago    Up 5 hours (healthy)    0.0.0.0:5001->5001/tcp, [::]:5001->5001/tcp
-catalog-service          laptop-marketplace-catalog-service          "docker-entrypoint.s…"   catalog-service          5 hours ago    Up 5 hours (healthy)    0.0.0.0:5002->5002/tcp, [::]:5002->5002/tcp
-customer-frontend        laptop-marketplace-customer                 "docker-entrypoint.s…"   customer                 5 hours ago    Up 5 hours              0.0.0.0:3001->3001/tcp, [::]:3001->3001/tcp
-home-frontend            laptop-marketplace-home                     "docker-entrypoint.s…"   home                     10 hours ago   Up 10 hours             0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp
-inventory-service        laptop-marketplace-inventory-service        "docker-entrypoint.s…"   inventory-service        10 hours ago   Up 10 hours (healthy)   0.0.0.0:5003->5003/tcp, [::]:5003->5003/tcp
-laptop-db                postgres:14-alpine                          "docker-entrypoint.s…"   db                       11 hours ago   Up 11 hours (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp
-location-service         laptop-marketplace-location-service         "docker-entrypoint.s…"   location-service         10 hours ago   Up 10 hours (healthy)   0.0.0.0:5006->5006/tcp, [::]:5006->5006/tcp
-notification-service     laptop-marketplace-notification-service     "docker-entrypoint.s…"   notification-service     10 hours ago   Up 10 hours             0.0.0.0:5005->5005/tcp, [::]:5005->5005/tcp
-recommendation-service   laptop-marketplace-recommendation-service   "uvicorn main:app --…"   recommendation-service   10 hours ago   Up 10 hours (healthy)   0.0.0.0:5004->5004/tcp, [::]:5004->5004/tcp
-vendor-frontend          laptop-marketplace-vendor                   "docker-entrypoint.s…"   vendor                   5 hours ago    Up 5 hours              0.0.0.0:3002->3002/tcp, [::]:3002->3002/tcp
+admin-frontend           laptop-marketplace-admin                    "docker-entrypoint.s…"   admin                    11 hours ago   Up 11 hours             0.0.0.0:3003->3003/tcp, [::]:3003->3003/tcp
+api-gateway              laptop-marketplace-api-gateway              "docker-entrypoint.s…"   api-gateway              6 hours ago    Up 6 hours (healthy)    0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp
+auth-frontend            laptop-marketplace-auth                     "docker-entrypoint.s…"   auth                     11 hours ago   Up 11 hours             0.0.0.0:3004->3004/tcp, [::]:3004->3004/tcp
+auth-service             laptop-marketplace-auth-service             "docker-entrypoint.s…"   auth-service             6 hours ago    Up 6 hours (healthy)    0.0.0.0:5001->5001/tcp, [::]:5001->5001/tcp
+catalog-service          laptop-marketplace-catalog-service          "docker-entrypoint.s…"   catalog-service          6 hours ago    Up 6 hours (healthy)    0.0.0.0:5002->5002/tcp, [::]:5002->5002/tcp
+customer-frontend        laptop-marketplace-customer                 "docker-entrypoint.s…"   customer                 6 hours ago    Up 6 hours              0.0.0.0:3001->3001/tcp, [::]:3001->3001/tcp
+home-frontend            laptop-marketplace-home                     "docker-entrypoint.s…"   home                     16 hours ago   Up 16 hours             0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp
+inventory-service        laptop-marketplace-inventory-service        "docker-entrypoint.s…"   inventory-service        6 hours ago    Up 6 hours (healthy)    0.0.0.0:5003->5003/tcp, [::]:5003->5003/tcp
+laptop-db                postgres:14-alpine                          "docker-entrypoint.s…"   db                       17 hours ago   Up 17 hours (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp
+location-service         laptop-marketplace-location-service         "docker-entrypoint.s…"   location-service         16 hours ago   Up 16 hours (healthy)   0.0.0.0:5006->5006/tcp, [::]:5006->5006/tcp
+notification-service     laptop-marketplace-notification-service     "docker-entrypoint.s…"   notification-service     17 hours ago   Up 16 hours             0.0.0.0:5005->5005/tcp, [::]:5005->5005/tcp
+recommendation-service   laptop-marketplace-recommendation-service   "uvicorn main:app --…"   recommendation-service   17 hours ago   Up 16 hours (healthy)   0.0.0.0:5004->5004/tcp, [::]:5004->5004/tcp
+vendor-frontend          laptop-marketplace-vendor                   "docker-entrypoint.s…"   vendor                   6 hours ago    Up 6 hours              0.0.0.0:3002->3002/tcp, [::]:3002->3002/tcp
