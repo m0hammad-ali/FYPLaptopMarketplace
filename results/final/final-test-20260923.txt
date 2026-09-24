@@ -1,0 +1,62 @@
+=== Final System Test - Wed Sep 23 20:57:57 PST 2026 ===
+
+Containers:
+NAME                     IMAGE                                       COMMAND                  SERVICE                  CREATED        STATUS                  PORTS
+admin-frontend           laptop-marketplace-admin                    "docker-entrypoint.s…"   admin                    10 hours ago   Up 10 hours             0.0.0.0:3003->3003/tcp, [::]:3003->3003/tcp
+api-gateway              laptop-marketplace-api-gateway              "docker-entrypoint.s…"   api-gateway              4 hours ago    Up 4 hours (healthy)    0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp
+auth-frontend            laptop-marketplace-auth                     "docker-entrypoint.s…"   auth                     10 hours ago   Up 10 hours             0.0.0.0:3004->3004/tcp, [::]:3004->3004/tcp
+auth-service             laptop-marketplace-auth-service             "docker-entrypoint.s…"   auth-service             4 hours ago    Up 4 hours (healthy)    0.0.0.0:5001->5001/tcp, [::]:5001->5001/tcp
+catalog-service          laptop-marketplace-catalog-service          "docker-entrypoint.s…"   catalog-service          4 hours ago    Up 4 hours (healthy)    0.0.0.0:5002->5002/tcp, [::]:5002->5002/tcp
+customer-frontend        laptop-marketplace-customer                 "docker-entrypoint.s…"   customer                 4 hours ago    Up 4 hours              0.0.0.0:3001->3001/tcp, [::]:3001->3001/tcp
+home-frontend            laptop-marketplace-home                     "docker-entrypoint.s…"   home                     15 hours ago   Up 15 hours             0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp
+inventory-service        laptop-marketplace-inventory-service        "docker-entrypoint.s…"   inventory-service        4 hours ago    Up 4 hours (healthy)    0.0.0.0:5003->5003/tcp, [::]:5003->5003/tcp
+laptop-db                postgres:14-alpine                          "docker-entrypoint.s…"   db                       16 hours ago   Up 16 hours (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp
+location-service         laptop-marketplace-location-service         "docker-entrypoint.s…"   location-service         15 hours ago   Up 15 hours (healthy)   0.0.0.0:5006->5006/tcp, [::]:5006->5006/tcp
+notification-service     laptop-marketplace-notification-service     "docker-entrypoint.s…"   notification-service     16 hours ago   Up 15 hours             0.0.0.0:5005->5005/tcp, [::]:5005->5005/tcp
+recommendation-service   laptop-marketplace-recommendation-service   "uvicorn main:app --…"   recommendation-service   16 hours ago   Up 15 hours (healthy)   0.0.0.0:5004->5004/tcp, [::]:5004->5004/tcp
+vendor-frontend          laptop-marketplace-vendor                   "docker-entrypoint.s…"   vendor                   4 hours ago    Up 4 hours              0.0.0.0:3002->3002/tcp, [::]:3002->3002/tcp
+
+Integration Tests:
+==========================================
+ Laptop Marketplace - Integration Tests
+==========================================
+
+-- Backend Health --
+  OK  Port 5000
+  OK  Port 5001
+  OK  Port 5002
+  OK  Port 5003
+  OK  Port 5004
+  OK  Port 5005
+  OK  Port 5006
+
+-- Frontend Health --
+  OK  Port 3000
+  OK  Port 3001
+  OK  Port 3002
+  OK  Port 3003
+  OK  Port 3004
+
+-- Public Catalog --
+  OK  Featured laptops returns data
+  OK  Full catalog requires auth
+
+-- Auth Flow --
+  OK  Register returns token
+  OK  Login returns token
+
+-- Authenticated Catalog --
+  OK  Authenticated catalog returns 200
+
+-- Recommendation Engine --
+  OK  Returns recommendations
+
+-- Notification Service --
+  OK  WhatsApp link generated
+
+-- Input Validation --
+  OK  Invalid email rejected
+
+==========================================
+ Results: 20 passed, 0 failed
+==========================================
